@@ -1594,13 +1594,13 @@ const LANDING_HTML = `
     <div class="section-tag">Конфигуратор подбора</div>
     <h2>Конфигуратор подбора Керми Комфорт</h2>
     <div class="divider"></div>
-    <div style="width:100%;border-radius:12px;overflow:visible;-webkit-overflow-scrolling:touch;">
-      <iframe
-        id="kermiConfigIframe"
-        src="https://kermi-heat-pick.base44.app/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363"
-        style="width:100%;height:600px;border:0;display:block;max-width:1100px;margin:0 auto;transition:height .3s ease;"
-        title="Kermi Comfort — подбор радиаторов"></iframe>
-    </div>
+  </div>
+  <div style="width:100%;margin-top:40px;">
+    <iframe
+      id="kermiConfigIframe"
+      src="https://kermi-heat-pick.base44.app/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363"
+      style="width:100%;height:600px;border:0;display:block;transition:height .3s ease;"
+      title="Kermi Comfort — подбор радиаторов"></iframe>
   </div>
 </section>
 
