@@ -1596,8 +1596,9 @@ const LANDING_HTML = `
     <div class="divider"></div>
     <div style="width:100%;border-radius:12px;overflow:visible;-webkit-overflow-scrolling:touch;">
       <iframe
+        id="kermiConfigIframe"
         src="https://kermi-heat-pick.base44.app/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363"
-        style="width:100%;height:1000px;border:0;display:block;"
+        style="width:100%;height:600px;border:0;display:block;max-width:1100px;margin:0 auto;transition:height .3s ease;"
         title="Kermi Comfort — подбор радиаторов"></iframe>
     </div>
   </div>
@@ -1880,6 +1881,17 @@ export default function Home() {
       if (el) el.classList.add('active');
     };
 
+    // ===== Iframe Auto Height =====
+    const handleIframeMessage = (event) => {
+      if (event.data && event.data.type === 'setIframeHeight') {
+        const iframe = document.getElementById('kermiConfigIframe');
+        if (iframe && event.data.height > 0) {
+          iframe.style.height = event.data.height + 'px';
+        }
+      }
+    };
+    window.addEventListener('message', handleIframeMessage);
+
     // ===== Scroll Spy =====
     const sections = document.querySelectorAll('section[id], div[id="hero"]');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -1913,6 +1925,7 @@ export default function Home() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('message', handleIframeMessage);
       animObserver.disconnect();
       delete window.showTab;
       delete window.activateSeries;
