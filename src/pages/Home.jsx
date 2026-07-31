@@ -1040,7 +1040,7 @@ const LANDING_HTML = `
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/7d0536a71_KermiCRU-T11FK011.png" alt="Сечение тип 11 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_12" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">1 пан. + 2 ребра</div></div>
+            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/13aef724e_KermiCRU-T12FK012.png" alt="Сечение тип 12 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_20" style="display:none;">
@@ -1084,7 +1084,7 @@ const LANDING_HTML = `
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/9e3f65074_KermiCRU-T11FTV11.png" alt="Сечение тип 11 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_12" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">1 пан. + 2 ребра</div></div>
+            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/74f86d512_KermiCRU-T12FTV12.png" alt="Сечение тип 12 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_20" style="display:none;">
@@ -1116,7 +1116,7 @@ const LANDING_HTML = `
         </div>
         <div class="type-panels">
           <div class="type-info-row" id="row_FTU_12" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">1 пан. + 2 ребра</div></div>
+            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/bdb3f6c1f_KermiCRU-JCT12FTU12.png" alt="Сечение тип 12 FTU" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTU_22" style="display:none;">
