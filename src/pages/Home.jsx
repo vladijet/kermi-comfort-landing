@@ -1718,9 +1718,8 @@ const LANDING_HTML = `
         <div style="margin-bottom:28px;text-align:center;">
           <img src="https://base44.app/api/apps/69f20cdd1ade181e43a31fad/files/mp/public/69f20cdd1ade181e43a31fad/9e4c1a87c_colored_kermi_comfort.png"
                alt="Радиаторы Kermi Комфорт в цветах RAL: чёрный, слоновая кость, оливковый, бордо"
-               style="width:85%;display:inline-block;background:transparent;">
+               style="width:102%;max-width:100%;display:inline-block;background:transparent;">
         </div>
-        <p style="font-size:11px;color:#aaa;margin-top:12px;text-align:center">... и ещё 130+ оттенков по каталогу RAL</p>
       </div>
     </div>
   </div>
