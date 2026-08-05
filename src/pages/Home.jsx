@@ -276,9 +276,9 @@ const LANDING_HTML = `
     border-top: 1px solid var(--mgrey);
   }
   .type-depth-badge {
-    padding: 24px 28px; background: var(--lgrey);
+    padding: 24px 28px; background: transparent;
     border-right: 1px solid var(--mgrey);
-    display: flex; flex-direction: column; gap: 4px; align-items: flex-start;
+    display: flex; flex-direction: column; gap: 6px; align-items: flex-start;
   }
   .type-num { font-size: 32px; font-weight: 900; color: var(--dark); line-height: 1; }
   .type-depth { font-size: 22px; font-weight: 700; color: var(--lime); }
