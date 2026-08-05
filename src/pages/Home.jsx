@@ -617,6 +617,14 @@ const LANDING_HTML = `
   .mt-16 { margin-top: 16px; }
   .mb-0 { margin-bottom: 0; }
 
+  /* ========== NAV RESPONSIVE (burger at 1000px) ========== */
+  @media (max-width: 1000px) {
+    .nav-links { display: none; }
+    .nav-burger { display: flex; }
+    .nav-phone { display: none; }
+    .nav-phone-header-mobile { display: flex; }
+  }
+
   /* ========== MOBILE BURGER MENU ========== */
   .nav-burger {
     display: none;
@@ -707,10 +715,6 @@ const LANDING_HTML = `
   /* ========== RESPONSIVE ========== */
   @media (max-width: 768px) {
     nav { padding: 0 20px; }
-    .nav-links { display: none; }
-    .nav-burger { display: flex; }
-    .nav-phone { display: none; }
-    .nav-phone-header-mobile { display: flex; }
     section { padding: 56px 20px; }
     .container { padding-left: 20px; padding-right: 20px; }
     .hero { padding: 64px 20px 120px; }
