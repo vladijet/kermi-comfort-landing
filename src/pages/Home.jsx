@@ -733,6 +733,32 @@ const LANDING_HTML = `
       max-width: 280px;
       text-align: center;
     }
+
+    /* === Преимущества: таблица === */
+    .compare-table table { font-size: 13px; width: 100%; }
+    .compare-table thead th { padding: 12px 10px; font-size: 10px; }
+    .compare-table tbody td { padding: 10px 8px; word-break: break-word; }
+    .compare-table tbody td:first-child { width: 38%; }
+
+    /* === Артикул: карточки примеров === */
+    .art-example { flex-direction: column; align-items: flex-start; padding: 12px; gap: 8px; }
+    .art-code { min-width: 0; width: 100%; word-break: break-all; font-size: 14px; }
+    .art-desc-ex { font-size: 12px; }
+
+    /* === Конструктив: текст + KPI === */
+    .feature-item { grid-template-columns: 40px 1fr; gap: 8px; padding: 16px 0; }
+    .feature-num { font-size: 24px; padding-right: 8px; }
+    .feature-title { font-size: 14px; }
+    .feature-text { font-size: 12px; }
+    .kpi-grid { grid-template-columns: 1fr; gap: 10px; justify-items: center; }
+    .kpi-box { width: 100%; max-width: 300px; padding: 18px; }
+    .kpi-val { font-size: 30px; }
+    .kpi-lbl { font-size: 11px; }
+
+    /* === Монтаж: сетки кронштейнов === */
+    .mount-grid { gap: 24px; }
+    .bracket-grid-3, .bracket-grid-4 { grid-template-columns: 1fr; }
+    .bracket-grid-2 { grid-template-columns: 1fr; }
   }
 </style>
 
