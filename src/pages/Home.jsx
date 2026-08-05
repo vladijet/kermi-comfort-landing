@@ -277,9 +277,13 @@ const LANDING_HTML = `
   }
   .type-depth-badge {
     padding: 24px 28px; background: transparent;
-    border-right: 1px solid var(--mgrey);
-    display: flex; flex-direction: column; gap: 6px; align-items: flex-start;
+    border-right: none;
+    display: flex; flex-direction: column; gap: 0; align-items: flex-start;
   }
+  .type-depth-badge .type-lbl { margin-bottom: 0; }
+  .type-depth-badge .type-num { margin-bottom: 14px; line-height: 1; }
+  .type-depth-badge .type-depth { margin-bottom: 6px; line-height: 1; }
+  .type-depth-badge .type-desc-small { margin-top: 2px; }
   .type-num { font-size: 32px; font-weight: 900; color: var(--dark); line-height: 1; }
   .type-depth { font-size: 22px; font-weight: 700; color: var(--lime); }
   .type-desc-small { font-size: 11px; color: var(--grey); margin-top: 2px; }
