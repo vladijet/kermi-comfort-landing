@@ -254,7 +254,7 @@ const LANDING_HTML = `
   .model-card-v2 .model-card-body { padding: 20px 20px 0; display: flex; flex-direction: column; flex: 1; }
 
   .type-selector-wrap { margin-top: 40px; }
-  .type-selector { background: var(--white); border: 1px solid var(--mgrey); border-radius: 10px; overflow: hidden; }
+  .type-selector { background: var(--white); border: none; border-radius: 10px; overflow: hidden; }
   .type-selector-header {
     display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 12px;
@@ -283,6 +283,7 @@ const LANDING_HTML = `
   .type-num { font-size: 32px; font-weight: 900; color: var(--dark); line-height: 1; }
   .type-depth { font-size: 22px; font-weight: 700; color: var(--lime); }
   .type-desc-small { font-size: 11px; color: var(--grey); margin-top: 2px; }
+  .type-lbl { font-size: 9px; color: #999; text-transform: uppercase; letter-spacing: .5px; font-weight: 600; }
   .type-drawing {
     padding: 24px 32px; display: flex; align-items: center; justify-content: center;
     background: var(--white);
@@ -1025,31 +1026,31 @@ const LANDING_HTML = `
         </div>
         <div class="type-panels">
           <div class="type-info-row" id="row_FK0_10" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">10</div><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">10</div><span class="type-lbl">глубина</span><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/6d6676741_KermiCRU-T10FK010.png" alt="Сечение тип 10 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_11" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">11</div><div class="type-depth">65 мм</div><div class="type-desc-small">1 пан. + 1 ребро</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">11</div><span class="type-lbl">глубина</span><div class="type-depth">65 мм</div><div class="type-desc-small">1 пан. + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/7d0536a71_KermiCRU-T11FK011.png" alt="Сечение тип 11 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_12" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">12</div><span class="type-lbl">глубина</span><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/13aef724e_KermiCRU-T12FK012.png" alt="Сечение тип 12 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_20" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">20</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">20</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/9d110117b_KermiCRU-T20FK020.png" alt="Сечение тип 20 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_22" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">22</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 пан. + 2 ребра</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">22</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 пан. + 2 ребра</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/4e7ed2cd2_KermiCRU-T22FK022.png" alt="Сечение тип 22 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_30" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">30</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">30</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/f40db4b3c_KermiCRU-T30FK030.png" alt="Сечение тип 30 FK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FK0_33" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">33</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 пан. + 3 ребра</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">33</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 пан. + 3 ребра</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/ee2434a5d_KermiCRU-T33FK033.png" alt="Сечение тип 33 FK0" loading="lazy"></div>
           </div>
         </div>
@@ -1069,31 +1070,31 @@ const LANDING_HTML = `
         </div>
         <div class="type-panels">
           <div class="type-info-row" id="row_FTV_10" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">10</div><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">10</div><span class="type-lbl">глубина</span><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/af830d5ea_KermiCRU-T10FTV10.png" alt="Сечение тип 10 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_11" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">11</div><div class="type-depth">65 мм</div><div class="type-desc-small">1 пан. + 1 ребро</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">11</div><span class="type-lbl">глубина</span><div class="type-depth">65 мм</div><div class="type-desc-small">1 пан. + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/9e3f65074_KermiCRU-T11FTV11.png" alt="Сечение тип 11 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_12" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">12</div><span class="type-lbl">глубина</span><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/74f86d512_KermiCRU-T12FTV12.png" alt="Сечение тип 12 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_20" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">20</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">20</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/3493a5e3b_KermiCRU-T20FTV20.png" alt="Сечение тип 20 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_22" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">22</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 пан. + 2 ребра</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">22</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 пан. + 2 ребра</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/efc5547ce_KermiCRU-T22FTV22.png" alt="Сечение тип 22 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_30" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">30</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">30</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/8c20709c9_KermiCRU-T30FTV30.png" alt="Сечение тип 30 FTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTV_33" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">33</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 пан. + 3 ребра</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">33</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 пан. + 3 ребра</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/9d267db7d_KermiCRU-T33FTV33.png" alt="Сечение тип 33 FTV" loading="lazy"></div>
           </div>
         </div>
@@ -1109,15 +1110,15 @@ const LANDING_HTML = `
         </div>
         <div class="type-panels">
           <div class="type-info-row" id="row_FTU_12" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">12</div><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">12</div><span class="type-lbl">глубина</span><div class="type-depth">68 мм</div><div class="type-desc-small">2 панели + 1 ребро</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/bdb3f6c1f_KermiCRU-JCT12FTU12.png" alt="Сечение тип 12 FTU" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTU_22" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">22</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 пан. + 2 ребра</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">22</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 пан. + 2 ребра</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/f82388a44_KermiCRU-JCT22FTU22.png" alt="Сечение тип 22 FTU" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_FTU_33" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">33</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 пан. + 3 ребра</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">33</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 пан. + 3 ребра</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/4161f5ddf_KermiCRU-JCT33FTU33.png" alt="Сечение тип 33 FTU" loading="lazy"></div>
           </div>
         </div>
@@ -1133,15 +1134,15 @@ const LANDING_HTML = `
         </div>
         <div class="type-panels">
           <div class="type-info-row" id="row_PK0_10" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">10</div><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">10</div><span class="type-lbl">глубина</span><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/e65d9f597_KermiCRU-T10PK010.png" alt="Сечение тип 10 PK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_PK0_20" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">20</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">20</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/23b3162d6_KermiCRU-T20PK020.png" alt="Сечение тип 20 PK0" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_PK0_30" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">30</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">30</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/103d7699b_KermiCRU-T30PK030.png" alt="Сечение тип 30 PK0" loading="lazy"></div>
           </div>
         </div>
@@ -1157,15 +1158,15 @@ const LANDING_HTML = `
         </div>
         <div class="type-panels">
           <div class="type-info-row" id="row_PTV_10" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">10</div><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">10</div><span class="type-lbl">глубина</span><div class="type-depth">48,5 мм</div><div class="type-desc-small">1 панель</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/c6714ba27_KermiCRU-T10PTV10.png" alt="Сечение тип 10 PTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_PTV_20" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">20</div><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">20</div><span class="type-lbl">глубина</span><div class="type-depth">102 мм</div><div class="type-desc-small">2 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/bdc808d20_KermiCRU-T20PTV20.png" alt="Сечение тип 20 PTV" loading="lazy"></div>
           </div>
           <div class="type-info-row" id="row_PTV_30" style="display:none;">
-            <div class="type-depth-badge"><div class="type-num">30</div><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
+            <div class="type-depth-badge"><span class="type-lbl">тип</span><div class="type-num">30</div><span class="type-lbl">глубина</span><div class="type-depth">157 мм</div><div class="type-desc-small">3 панели</div></div>
             <div class="type-drawing"><img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/4277bbf4e_KermiCRU-T30PTV30.png" alt="Сечение тип 30 PTV" loading="lazy"></div>
           </div>
         </div>
