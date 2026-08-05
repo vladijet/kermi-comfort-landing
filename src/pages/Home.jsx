@@ -357,7 +357,7 @@ const LANDING_HTML = `
   .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .kpi-box {
     padding: 24px; background: var(--white); text-align: center;
-    border-top: 3px solid var(--lime); border-radius: 10px;
+    border: none; border-radius: 10px;
   }
   .kpi-val { font-size: 36px; font-weight: 900; color: var(--dark); line-height: 1; }
   .kpi-lbl { font-size: 12px; color: var(--grey); margin-top: 6px; text-transform: uppercase; letter-spacing: .5px; }
@@ -410,12 +410,12 @@ const LANDING_HTML = `
   .mount-li-text p { font-size: 12px; color: var(--grey); }
   .alert-box { border-radius: 8px;
     padding: 14px 20px; margin-bottom: 20px;
-    border-left: 4px solid;
+    border: none;
     font-size: 13px;
   }
-  .alert-warn { background: #fff8e1; border-color: #f0a500; color: #5a3a00; }
-  .alert-err  { background: #ffebee; border-color: var(--red); color: #7a1010; }
-  .alert-info { background: #e8f5e9; border-color: var(--green); color: #1b4a1e; }
+  .alert-warn { background: #fff8e1; color: #5a3a00; }
+  .alert-err  { background: #ffebee; color: #7a1010; }
+  .alert-info { background: #e8f5e9; color: #1b4a1e; }
 
   /* ========== ПОДБОР ========== */
   .selection { background: var(--lgrey); }
