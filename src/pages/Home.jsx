@@ -40,15 +40,16 @@ const LANDING_HTML = `
     color: var(--white);
   }
   .nav-logo-sub { font-size: 11px; color: #aaa; letter-spacing: 1px; margin-top: 1px; }
-  .nav-links { display: flex; gap: 4px; flex-wrap: nowrap; max-width: calc(100vw - 260px); overflow: hidden; }
+  .nav-links { display: flex; gap: 4px; flex-wrap: nowrap; max-width: calc(100vw - 260px); overflow: hidden; align-items: center; }
   .nav-links a {
     color: #ccc; font-size: 12px; padding: 6px 10px; border-radius: 6px; white-space: nowrap; flex-shrink: 0;
-    transition: color .2s, background .2s;
+    transition: color .2s, background .2s; line-height: 1.2;
   }
   .nav-links a:hover { color: var(--white); background: rgba(255,255,255,.08); }
   .nav-cta {
     background: var(--lime); color: var(--dark) !important;
-    font-weight: 700; padding: 8px 20px !important; border-radius: 6px;
+    font-weight: 700; padding: 10px 20px !important; border-radius: 6px;
+    line-height: 1.2; display: inline-flex; align-items: center;
   }
   .nav-cta:hover { background: var(--lime-d) !important; }
   .nav-phone-header-mobile {
@@ -719,14 +720,10 @@ const LANDING_HTML = `
     <img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/26e20f0a6_Kermi-Logo_t.png" alt="KERMI" class="nav-logo-img">
   </a>
   <div class="nav-links">
-    <a href="#production">Производство</a>
-    <a href="#compare">Преимущества</a>
     <a href="#models">Модели</a>
     <a href="#article">Артикул</a>
     <a href="#mounting">Крепления</a>
     <a href="#selection">Конфигуратор подбора</a>
-    <a href="#colors">Цвета RAL</a>
-    <a href="#warranty">Гарантия</a>
     <a href="#dealers">Где купить</a>
     <a href="tel:88002345698" class="nav-phone" style="color:#fff;font-weight:600;font-size:15px;text-decoration:none;letter-spacing:0.3px;margin-right:4px;opacity:0.92;">8-800-234-56-98</a>
     <a href="#footer" class="nav-cta">Связаться</a>
@@ -737,14 +734,10 @@ const LANDING_HTML = `
   </button>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#production" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Производство</a>
-  <a href="#compare" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Преимущества</a>
   <a href="#models" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Модели</a>
   <a href="#article" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Артикул</a>
   <a href="#mounting" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Крепления</a>
   <a href="#selection" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Конфигуратор подбора</a>
-  <a href="#colors" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Цвета RAL</a>
-  <a href="#warranty" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Гарантия</a>
   <a href="#dealers" class="mm-link" onclick="var m=document.getElementById('mobileMenu');var b=document.getElementById('burgerBtn');if(m)m.classList.remove('open');if(b)b.classList.remove('active');">Где купить</a>
   <a href="tel:88002345698" class="nav-phone-mobile">📞 8-800-234-56-98</a>
   <a href="#footer" class="nav-cta-mobile mm-link">Связаться</a>
