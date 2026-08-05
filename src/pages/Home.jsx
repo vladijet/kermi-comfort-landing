@@ -484,6 +484,8 @@ const LANDING_HTML = `
   /* ========== RAL / ЦВЕТА ========== */
   .colors { background: var(--white); }
   .ral-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 48px; }
+  .ral-grid > div:first-child { order: 2; }
+  .ral-grid > div:last-child { order: 1; }
   .ral-swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 24px; }
   .swatch { position: relative; }
   .swatch-color { height: 52px; border: none; border-radius: 6px; }
@@ -1717,21 +1719,6 @@ const LANDING_HTML = `
           <img src="https://base44.app/api/apps/69f20cdd1ade181e43a31fad/files/mp/public/69f20cdd1ade181e43a31fad/9e4c1a87c_colored_kermi_comfort.png"
                alt="Радиаторы Kermi Комфорт в цветах RAL: чёрный, слоновая кость, оливковый, бордо"
                style="width:85%;display:inline-block;background:transparent;">
-        </div>
-        <p style="font-size:13px;color:var(--grey);margin-bottom:16px">Примеры доступных цветов (из 150+ RAL):</p>
-        <div class="ral-swatches">
-          <div class="swatch"><div class="swatch-color" style="background:#F4F4F4;border:1px solid #ddd"></div><div class="swatch-label">RAL 9010<br>Белый</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#D0D0D0"></div><div class="swatch-label">RAL 7035<br>Светл. серый</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#818479"></div><div class="swatch-label">RAL 7022<br>Серый</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#1A1A1A"></div><div class="swatch-label">RAL 9005<br>Чёрный</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#B0C4D8"></div><div class="swatch-label">RAL 7001<br>Серебр.</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#4D6B8A"></div><div class="swatch-label">RAL 5014<br>Гол.серый</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#354A5E"></div><div class="swatch-label">RAL 5011<br>Стальной</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#1B3A6B"></div><div class="swatch-label">RAL 5003<br>Сапфир</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#BFDE00;border:1px solid #a0b800"></div><div class="swatch-label">RAL 6018<br>Жёлто-зел.</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#587246"></div><div class="swatch-label">RAL 6011<br>Резедовый</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#9B1B30"></div><div class="swatch-label">RAL 3003<br>Рубиновый</div></div>
-          <div class="swatch"><div class="swatch-color" style="background:#C35831"></div><div class="swatch-label">RAL 2004<br>Оранжевый</div></div>
         </div>
         <p style="font-size:11px;color:#aaa;margin-top:12px;text-align:center">... и ещё 130+ оттенков по каталогу RAL</p>
       </div>
