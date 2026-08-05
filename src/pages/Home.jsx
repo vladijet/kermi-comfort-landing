@@ -727,12 +727,11 @@ const LANDING_HTML = `
     .footer-bottom { padding: 12px 20px; }
 
     .hero-bg-accent { display: none; }
-    .hero-btns { justify-content: center; }
+    .hero-btns { flex-direction: column; align-items: center; gap: 12px; }
     .btn-primary, .btn-outline {
-      flex: 1 1 0;
-      max-width: 240px;
+      width: 100%;
+      max-width: 280px;
       text-align: center;
-      padding: 13px 20px;
     }
   }
 </style>
