@@ -767,6 +767,11 @@ const LANDING_HTML = `
     .mount-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .mount-tab { padding: 10px 14px; font-size: 13px; white-space: nowrap; }
     .bracket-card { flex-direction: column !important; align-items: flex-start !important; }
+    /* Монтажные кронштейны: оставляем только «Высота радиатора» и «Артикул» */
+    #tab-fk0 .mount-table[style] th:nth-child(n+3),
+    #tab-fk0 .mount-table[style] td:nth-child(n+3),
+    #tab-ftu .mount-table[style] th:nth-child(n+3),
+    #tab-ftu .mount-table[style] td:nth-child(n+3) { display: none; }
 
     /* === Термовентиль === */
     .valve-specs { grid-template-columns: 1fr; gap: 12px; }
