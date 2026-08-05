@@ -1252,11 +1252,11 @@ const LANDING_HTML = `
 
     <div class="ral-note">
       <strong>⚠ Важно для заказа цветных радиаторов</strong>
-      <div class="ral-note-grid">
-        <div>Наценка за цветные исполнения — <strong>50%</strong>.</div>
-        <div>Доступны две текстуры: <strong>глянцевая (код 1)</strong> и <strong>матовая (код 2)</strong>.</div>
-        <div>Срок изготовления любого цветного исполнения: <strong>до 45 дней</strong>.</div>
-        <div>Стандарт (Белый, глянец): <strong>всегда на складе</strong>.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px 28px;line-height:1.5;">
+        <span>Наценка за цветные исполнения — <strong>50%</strong>.</span>
+        <span>Доступны две текстуры: <strong>глянцевая (код 1)</strong> и <strong>матовая (код 2)</strong>.</span>
+        <span>Срок изготовления любого цветного исполнения до <strong>45 дней</strong>.</span>
+        <span>Стандартный белый всегда <strong>на складе</strong>.</span>
       </div>
     </div>
   </div>
