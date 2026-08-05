@@ -725,6 +725,15 @@ const LANDING_HTML = `
     .art-box { font-size: 15px; padding: 10px 4px; }
     footer { padding: 32px 20px; }
     .footer-bottom { padding: 12px 20px; }
+
+    .hero-bg-accent { display: none; }
+    .hero-btns { justify-content: center; }
+    .btn-primary, .btn-outline {
+      flex: 1 1 0;
+      max-width: 240px;
+      text-align: center;
+      padding: 13px 20px;
+    }
   }
 </style>
 
