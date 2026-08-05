@@ -322,16 +322,21 @@ const LANDING_HTML = `
   .art-examples { display: flex; flex-direction: column; gap: 12px; margin-top: 36px; }
   .art-example {
     display: flex; align-items: center; gap: 20px; padding: 16px 20px;
-    border-left: 4px solid var(--lime); background: var(--lgrey); border-radius: 8px;
+    border-left: none; background: var(--lgrey); border-radius: 8px;
   }
   .art-code { font-family: 'Courier New', monospace; font-size: 15px; font-weight: 700; min-width: 280px; }
   .art-desc-ex { font-size: 13px; color: var(--grey); }
   .ral-note {
-    margin-top: 24px; padding: 20px 24px; border-radius: 8px;
-    background: #fffbe6; border-left: 4px solid #f0a500;
+    margin-top: 24px; padding: 16px 20px; border-radius: 8px;
+    background: #fffbe6; border-left: none;
     font-size: 13px; color: var(--dark);
   }
-  .ral-note strong { display: block; font-size: 15px; margin-bottom: 6px; }
+  .ral-note strong { display: block; font-size: 15px; margin-bottom: 8px; }
+  .ral-note-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px;
+  }
+  .ral-note-grid > div { line-height: 1.5; }
+  @media (max-width: 600px) { .ral-note-grid { grid-template-columns: 1fr; } }
 
   /* ========== КОНСТРУКТИВ ========== */
   .construction { background: var(--lgrey); }
@@ -1231,15 +1236,15 @@ const LANDING_HTML = `
     </div>
 
     <div class="art-examples">
-      <div class="art-example" style="border-color:#ccc;background:#f9f9f9">
+      <div class="art-example" style="background:#f9f9f9">
         <div class="art-code">FTV22050040<span style="color:#d00;font-weight:700">1</span>R2C</div>
         <div class="art-desc-ex">FTV тип 22 | высота 500 мм | длина 400 мм | <strong>белый глянец</strong> | подключение справа | кронштейны в комплекте | Россия</div>
       </div>
-      <div class="art-example" style="border-color:var(--lime);background:#f5ffe0">
+      <div class="art-example" style="background:#f5ffe0">
         <div class="art-code">FTV22050040<span style="color:#d00;font-weight:700">1</span>R2C<span style="color:#d00;font-weight:700">RAL7022</span></div>
         <div class="art-desc-ex">То же, но в цвете <strong>RAL 7022 «Серый», глянцевое исполнение</strong> (код «1» в артикуле + суффикс RAL)</div>
       </div>
-      <div class="art-example" style="border-color:#a0c0a0;background:#f0fff0">
+      <div class="art-example" style="background:#f0fff0">
         <div class="art-code">FTV22050040<span style="color:#d00;font-weight:700">2</span>R2C<span style="color:#d00;font-weight:700">RAL7022</span></div>
         <div class="art-desc-ex">То же в цвете <strong>RAL 7022, матовое исполнение</strong> (код «2» вместо «1» в позиции цвета)</div>
       </div>
@@ -1247,10 +1252,12 @@ const LANDING_HTML = `
 
     <div class="ral-note">
       <strong>⚠ Важно для заказа цветных радиаторов</strong>
-      Наценка за цветные исполнения — <strong>50%</strong>.
-      Доступны две текстуры: <strong>глянцевая (код 1)</strong> и <strong>матовая (код 2)</strong>.
-      Срок изготовления любого цветного исполнения: <strong>до 45 дней</strong>.
-      Стандарт (Белый, глянец): <strong>всегда на складе</strong>.
+      <div class="ral-note-grid">
+        <div>Наценка за цветные исполнения — <strong>50%</strong>.</div>
+        <div>Доступны две текстуры: <strong>глянцевая (код 1)</strong> и <strong>матовая (код 2)</strong>.</div>
+        <div>Срок изготовления любого цветного исполнения: <strong>до 45 дней</strong>.</div>
+        <div>Стандарт (Белый, глянец): <strong>всегда на складе</strong>.</div>
+      </div>
     </div>
   </div>
 </section>
