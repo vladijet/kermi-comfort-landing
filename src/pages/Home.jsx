@@ -759,6 +759,32 @@ const LANDING_HTML = `
     .mount-grid { gap: 24px; }
     .bracket-grid-3, .bracket-grid-4 { grid-template-columns: 1fr; }
     .bracket-grid-2 { grid-template-columns: 1fr; }
+    /* инлайн-сетки внутри блоков кронштейнов -> одна колонка */
+    .mount-content div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    /* таблицы комплектации: горизонтальная прокрутка вместо обрезки */
+    .mount-content table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .mount-table th, .mount-table td { padding: 8px 10px; font-size: 12px; }
+    .mount-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .mount-tab { padding: 10px 14px; font-size: 13px; white-space: nowrap; }
+    .bracket-card { flex-direction: column !important; align-items: flex-start !important; }
+
+    /* === Термовентиль === */
+    .valve-specs { grid-template-columns: 1fr; gap: 12px; }
+
+    /* === Гарантия === */
+    .warranty-kpis { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .wkpi { padding: 18px 12px; }
+    .wkpi-val { font-size: 32px; }
+    .water-grid { grid-template-columns: 1fr; }
+
+    /* === Цвета RAL === */
+    .ral-swatches { grid-template-columns: repeat(3, 1fr); }
+    .ral-cond-val { font-size: 22px; min-width: 48px; }
+
+    /* === Модели / сечения === */
+    .type-selector-title { white-space: normal; }
+    .model-spec { flex-wrap: wrap; }
+    .model-spec-val { white-space: normal; text-align: left; }
   }
 </style>
 
