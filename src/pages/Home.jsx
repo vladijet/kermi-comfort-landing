@@ -1435,7 +1435,7 @@ const LANDING_HTML = `
     <div class="section-tag">Монтаж</div>
     <h2>Крепления и комплектность</h2>
     <div class="divider"></div>
-    <p class="lead" style="font-size:16px">Тип кронштейна зависит от серии радиатора. FK0/FTV/PK0/PTV поставляются с кронштейнами в комплекте, кроме FK0 Т33 H=200 мм; FTU — без кронштейнов, заказываются отдельно.</p>
+    <p class="lead" style="font-size:16px">Тип кронштейна зависит от серии радиатора. FK0/FTV/PK0/PTV поставляются с кронштейнами в комплекте, кроме FK0 H=200 мм; FTU — без кронштейнов, заказываются отдельно.</p>
 
     <div class="mount-tabs">
       <div class="mount-tab active" onclick="showTab('fk0', this)">FK0 / FTV</div>
