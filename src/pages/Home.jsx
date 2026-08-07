@@ -483,7 +483,7 @@ const LANDING_HTML = `
 
   /* ========== RAL / ЦВЕТА ========== */
   .colors { background: var(--white); }
-  .ral-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 48px; }
+  .ral-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 48px; }
   .ral-grid > div:first-child { order: 2; }
   .ral-grid > div:last-child { order: 1; }
   .ral-swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 24px; }
@@ -1694,11 +1694,11 @@ const LANDING_HTML = `
             <div class="ral-cond-text"><h4>цветов из палитры RAL</h4><p>Глянцевое и матовое исполнение по заказу</p></div>
           </div>
         </div>
-        <div style="margin-top:24px;padding:20px;background:var(--lgrey);font-size:13px;border-radius:10px">
+        <div style="margin-top:24px;font-size:13px;">
           <strong style="display:block;margin-bottom:8px">Как заказать цветной радиатор:</strong>
-          <code style="display:block;background:#e8e8e8;padding:8px 12px;margin:6px 0;font-size:13px;border-radius:6px">FTV220500401R2C<strong>RAL7022</strong></code>
+          <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV220500401R2C<strong>RAL7022</strong></code>
           <span style="color:var(--grey)">Глянец (код «1») + суффикс RAL</span>
-          <code style="display:block;background:#e8e8e8;padding:8px 12px;margin:6px 0;font-size:13px;border-radius:6px">FTV2205004<strong>0</strong>2R2C<strong>RAL7022</strong></code>
+          <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV2205004<strong>0</strong>2R2C<strong>RAL7022</strong></code>
           <span style="color:var(--grey)">Матт (код «2» на позиции цвета) + суффикс RAL</span>
         </div>
       </div>
