@@ -1693,18 +1693,6 @@ const LANDING_HTML = `
             <div class="ral-cond-val">150+</div>
             <div class="ral-cond-text"><h4>цветов из палитры RAL</h4><p>Глянцевое и матовое исполнение по заказу</p></div>
           </div>
-          <div class="ral-cond-item">
-            <div class="ral-cond-val">+50%</div>
-            <div class="ral-cond-text"><h4>наценка к стандартной цене</h4><p>Для любого цветного исполнения</p></div>
-          </div>
-          <div class="ral-cond-item">
-            <div class="ral-cond-val">45 дн.</div>
-            <div class="ral-cond-text"><h4>максимальный срок изготовления</h4><p>Для любого исполнения — стандартного и цветного</p></div>
-          </div>
-          <div class="ral-cond-item">
-            <div class="ral-cond-val">✓</div>
-            <div class="ral-cond-text"><h4>Белый — всегда на складе</h4><p>Стандартные размеры в белом глянцевом исполнении доступны немедленно</p></div>
-          </div>
         </div>
         <div style="margin-top:24px;padding:20px;background:var(--lgrey);font-size:13px;border-radius:10px">
           <strong style="display:block;margin-bottom:8px">Как заказать цветной радиатор:</strong>
