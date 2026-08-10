@@ -1675,7 +1675,7 @@ const LANDING_HTML = `
     <iframe
       id="kermiConfigIframe"
       src="https://kermi-heat-pick.base44.app/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363"
-      style="width:100%;height:600px;border:0;display:block;transition:height .3s ease;"
+      style="width:100%;height:600px;border:0;display:block;transition:height .3s ease;border-radius:12px;overflow:hidden;"
       title="Kermi Comfort — подбор радиаторов"></iframe>
   </div>
 </section>
