@@ -1704,7 +1704,7 @@ const LANDING_HTML = `
       </div>
       <div>
         <div style="margin-bottom:28px;text-align:center;">
-          <img src="https://base44.app/api/apps/69f20cdd1ade181e43a31fad/files/mp/public/69f20cdd1ade181e43a31fad/9e4c1a87c_colored_kermi_comfort.png"
+          <img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/9e4c1a87c_colored_kermi_comfort.png"
                alt="Радиаторы Kermi Комфорт в цветах RAL: чёрный, слоновая кость, оливковый, бордо"
                style="width:102%;max-width:100%;display:inline-block;background:transparent;">
         </div>
