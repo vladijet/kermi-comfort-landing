@@ -119,7 +119,7 @@ const LANDING_HTML = `
     gap: 48px; align-items: center; position: relative; z-index: 2;
   }
   .hero-right {
-    display: flex; flex-direction: column; align-items: center; gap: 0;
+    display: flex; flex-direction: column; align-items: center; gap: 28px;
   }
   .hero-right img {
     width: 100%; max-width: 760px;
