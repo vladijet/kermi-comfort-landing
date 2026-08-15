@@ -620,9 +620,9 @@ const LANDING_HTML = `
   .mb-0 { margin-bottom: 0; }
 
   /* ========== INTERACTIVE RADIATOR (Преимущества) ========== */
-  .compare { background: #1a1a1a; color: var(--white); }
-  .compare h2 { color: var(--white); }
-  .compare .lead { color: #ccc; }
+  .compare { background: var(--white); color: var(--dark); }
+  .compare h2 { color: var(--dark); }
+  .compare .lead { color: var(--grey); }
   .compare .divider { background: var(--lime); }
   .ir-wrap {
     position: relative; margin: 48px auto 0; max-width: 760px;
@@ -630,8 +630,8 @@ const LANDING_HTML = `
   }
   .ir-stage {
     position: relative; width: 100%; max-width: 680px;
-    background: #0e0e0e; border-radius: 14px; overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0,0,0,.4);
+    background: #f4f4f4; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0,0,0,.08);
   }
   .ir-stage img.radiator { width: 100%; display: block; }
   .puls-dot {
