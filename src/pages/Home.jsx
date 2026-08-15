@@ -224,9 +224,7 @@ const LANDING_HTML = `
     display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: .5px;
     padding: 3px 7px; margin-bottom: 14px; text-transform: uppercase; width: fit-content; border-radius: 4px;
   }
-  .badge-green { background: #e8f5e9; color: var(--green); }
-  .badge-yellow { background: #fff8e1; color: #b07000; }
-  .badge-blue { background: #e3f2fd; color: #0d47a1; }
+  .badge-green, .badge-yellow, .badge-blue { background: var(--lime); color: var(--dark); }
   .model-specs { display: flex; flex-direction: column; gap: 0; }
   .model-spec {
     display: flex; justify-content: space-between; align-items: baseline;
