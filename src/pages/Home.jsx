@@ -1003,7 +1003,7 @@ const LANDING_HTML = `
           </div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:94%;top:30%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:94%;top:18%;width:0;height:0;">
           <div class="puls-dot"></div>
           <div class="dot-callout" style="right:24px;text-align:right;">
             <strong>Оригинальный термовентиль</strong>
@@ -1027,7 +1027,7 @@ const LANDING_HTML = `
           </div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:90%;top:90%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:90%;top:94%;width:0;height:0;">
           <div class="puls-dot"></div>
           <div class="dot-callout has-img" style="right:24px;">
             <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/7b0983afa_Group547.png" alt="Переходники G½→G¾">
