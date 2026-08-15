@@ -635,39 +635,41 @@ const LANDING_HTML = `
   }
   .ir-stage img.radiator { width: 100%; display: block; }
   .puls-dot {
-    position: absolute; width: 18px; height: 18px; border-radius: 50%;
-    background: #666; border: 2px solid #fff; cursor: pointer;
+    position: absolute; width: 28px; height: 28px; border-radius: 50%;
+    background: #2a2a2a; border: 3px solid #fff; cursor: pointer;
     transform: translate(-50%, -50%); z-index: 3;
-    animation: pulseDot 1.8s ease-in-out infinite;
+    box-shadow: 0 0 0 2px rgba(204,255,51,.55), 0 2px 10px rgba(0,0,0,.35);
+    animation: pulseDot 1.6s ease-in-out infinite;
   }
   .puls-dot::after {
-    content: ''; position: absolute; inset: -6px; border-radius: 50%;
-    border: 2px solid rgba(204,255,51,.6);
-    animation: pulseRing 1.8s ease-out infinite;
+    content: ''; position: absolute; inset: -8px; border-radius: 50%;
+    border: 3px solid rgba(204,255,51,.7);
+    animation: pulseRing 1.6s ease-out infinite;
   }
   .puls-dot.is-active { animation: none; background: var(--lime); border-color: var(--lime); }
   .puls-dot.is-active::after { animation: none; opacity: 0; }
   @keyframes pulseDot {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: .9; }
-    50% { transform: translate(-50%, -50%) scale(1.18); opacity: 1; }
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    50% { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
   }
   @keyframes pulseRing {
-    0% { transform: scale(.8); opacity: .8; }
-    100% { transform: scale(1.8); opacity: 0; }
+    0% { transform: scale(.75); opacity: .9; }
+    100% { transform: scale(1.9); opacity: 0; }
   }
   .dot-callout {
     position: absolute; background: #CCFF33; color: #000;
     padding: 12px 16px; border-radius: 10px; font-size: 13px; line-height: 1.45;
-    max-width: 260px; z-index: 4; opacity: 0; transform: translateY(6px);
+    max-width: 260px; z-index: 4; opacity: 0; transform: translateX(6px);
     transition: opacity .2s ease, transform .2s ease;
     pointer-events: none; font-weight: 600;
     box-shadow: 0 6px 20px rgba(0,0,0,.35);
+    top: 50%;
   }
   .dot-callout strong { display: block; margin-bottom: 2px; font-size: 13.5px; }
   .dot-callout .small { font-weight: 500; color: #222; font-size: 12px; display: block; }
   .puls-dot.is-active + .dot-callout,
   .ir-dot:hover .dot-callout,
-  .ir-dot.is-active .dot-callout { opacity: 1; transform: translateY(0); }
+  .ir-dot.is-active .dot-callout { opacity: 1; transform: translateX(0) translateY(-50%); }
   .dot-callout.has-img { padding: 8px; max-width: 200px; }
   .dot-callout.has-img img { width: 100%; border-radius: 6px; display: block; }
   .dot-callout.has-img .cap { padding: 6px 4px 2px; font-size: 12px; }
@@ -677,7 +679,7 @@ const LANDING_HTML = `
   }
   @media (max-width: 768px) {
     .dot-callout { max-width: 200px; font-size: 12px; }
-    .puls-dot { width: 16px; height: 16px; }
+    .puls-dot { width: 22px; height: 22px; }
   }
 
   /* ========== MOBILE BURGER MENU ========== */
@@ -995,15 +997,15 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:22%;top:14%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="left:18px;top:-6px;">
+          <div class="dot-callout" style="left:24px;">
             <strong>Сталь CORREX</strong>
             <span class="small">Северсталь — коррозионная стойкость ×1,5</span>
           </div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:80%;top:10%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:94%;top:30%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="right:18px;top:-6px;text-align:right;">
+          <div class="dot-callout" style="right:24px;text-align:right;">
             <strong>Оригинальный термовентиль</strong>
             <span class="small">KERMI V3-Ks, предустановлен на заводе</span>
           </div>
@@ -1011,7 +1013,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:48%;top:40%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="left:18px;top:-6px;">
+          <div class="dot-callout" style="left:24px;">
             <strong>Покрытие премиум-класса</strong>
             <span class="small">Титаноцирконевая пассивация — защита ×2 · Толщина ЛКП — 100 мкм</span>
           </div>
@@ -1019,15 +1021,15 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:46%;top:84%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="left:18px;bottom:-6px;">
+          <div class="dot-callout" style="left:24px;">
             <strong>Шаг длины 100 мм</strong>
             <span class="small">от 400 до 3000 мм — точный подбор под любой проём</span>
           </div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:82%;top:82%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:90%;top:90%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout has-img" style="right:14px;bottom:-6px;">
+          <div class="dot-callout has-img" style="right:24px;">
             <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/7b0983afa_Group547.png" alt="Переходники G½→G¾">
             <div class="cap"><strong>Переходники G½"→G¾"</strong> в комплекте</div>
           </div>
