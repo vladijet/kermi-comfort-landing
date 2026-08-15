@@ -122,12 +122,12 @@ const LANDING_HTML = `
     display: flex; flex-direction: column; align-items: center; gap: 0;
   }
   .hero-right img {
-    width: 100%; max-width: 520px;
+    width: 100%; max-width: 624px;
     filter: drop-shadow(0 20px 60px rgba(0,0,0,.55));
     display: block;
   }
   .hero-stats-row {
-    display: flex; gap: 0; width: 100%; max-width: 520px;
+    display: flex; gap: 0; width: 100%; max-width: 624px;
     background: rgba(0,0,0,.35); border-radius: 8px;
   }
   .hero-stats-row .stat {
