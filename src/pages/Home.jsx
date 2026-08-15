@@ -682,6 +682,7 @@ const LANDING_HTML = `
   }
   @media (max-width: 768px) {
     .dot-callout { width: 220px; font-size: 11px; }
+    .dot-callout:not(.has-img) { flex-direction: column; align-items: flex-start; gap: 4px; }
     .dot-callout strong { font-size: 12px; }
     .dot-callout.has-img { width: 280px; }
     .dot-callout.has-img img { width: 112px; height: 112px; }
