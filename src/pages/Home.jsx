@@ -122,7 +122,7 @@ const LANDING_HTML = `
     display: flex; flex-direction: column; align-items: center; gap: 28px;
   }
   .hero-right img {
-    width: 100%; max-width: 874px;
+    width: 100%; max-width: 1049px;
     filter: drop-shadow(0 20px 60px rgba(0,0,0,.55));
     display: block;
   }
