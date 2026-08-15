@@ -675,8 +675,8 @@ const LANDING_HTML = `
   .puls-dot.is-active + .dot-callout-below,
   .ir-dot:hover .dot-callout-below,
   .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(-50%) translateY(28px); }
-  .dot-callout.has-img { padding: 8px; width: 260px; align-items: center; }
-  .dot-callout.has-img img { width: 72px; height: 72px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+  .dot-callout.has-img { padding: 10px; width: 420px; align-items: center; gap: 14px; }
+  .dot-callout.has-img img { width: 144px; height: 144px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
   .dot-callout.has-img .cap { padding: 0; font-size: 11.5px; }
   @media (hover: hover) {
     .ir-dot:hover .puls-dot { animation: none; background: var(--lime); border-color: var(--lime); }
@@ -685,8 +685,8 @@ const LANDING_HTML = `
   @media (max-width: 768px) {
     .dot-callout { width: 220px; font-size: 11px; }
     .dot-callout strong { font-size: 12px; }
-    .dot-callout.has-img { width: 210px; }
-    .dot-callout.has-img img { width: 56px; height: 56px; }
+    .dot-callout.has-img { width: 280px; }
+    .dot-callout.has-img img { width: 112px; height: 112px; }
     .puls-dot { width: 22px; height: 22px; }
   }
 
