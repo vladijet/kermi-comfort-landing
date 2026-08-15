@@ -670,11 +670,11 @@ const LANDING_HTML = `
   .dot-callout .small { font-weight: 500; color: #222; font-size: 11.5px; }
   .puls-dot.is-active + .dot-callout,
   .ir-dot:hover .dot-callout,
-  .ir-dot.is-active .dot-callout { opacity: 1; transform: translateX(0) translateY(-50%); }
-  .dot-callout-below { top: auto; bottom: auto; }
+  .ir-dot.is-active .dot-callout { opacity: 1; transform: translateX(-50%) translateY(-50%); }
+  .dot-callout-below { top: auto; bottom: auto; left: 50%; }
   .puls-dot.is-active + .dot-callout-below,
   .ir-dot:hover .dot-callout-below,
-  .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(0) translateY(28px); }
+  .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(-50%) translateY(28px); }
   .dot-callout.has-img { padding: 8px; width: 260px; align-items: center; }
   .dot-callout.has-img img { width: 72px; height: 72px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
   .dot-callout.has-img .cap { padding: 0; font-size: 11.5px; }
@@ -1005,7 +1005,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:22%;top:14%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below" style="left:0;">
+          <div class="dot-callout dot-callout-below">
             <strong>Сталь CORREX</strong>
             <span class="small">Северсталь — коррозионная стойкость ×1,5</span>
           </div>
@@ -1013,7 +1013,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:97%;top:14%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below" style="right:0;text-align:left;">
+          <div class="dot-callout dot-callout-below">
             <strong>Оригинальный термовентиль</strong>
             <span class="small">KERMI V3-Ks, предустановлен на заводе</span>
           </div>
@@ -1021,7 +1021,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:48%;top:40%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below" style="left:0;">
+          <div class="dot-callout dot-callout-below">
             <strong>Покрытие премиум-класса</strong>
             <span class="small">Титаноцирконевая пассивация — защита ×2 · Толщина ЛКП — 100 мкм</span>
           </div>
@@ -1029,7 +1029,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:46%;top:84%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below" style="left:0;">
+          <div class="dot-callout dot-callout-below">
             <strong>Шаг длины 100 мм</strong>
             <span class="small">от 400 до 3000 мм — точный подбор под любой проём</span>
           </div>
@@ -1037,7 +1037,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:93%;top:97%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout has-img dot-callout-below" style="right:0;">
+          <div class="dot-callout has-img dot-callout-below">
             <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/7b0983afa_Group547.png" alt="Переходники G½→G¾">
             <div class="cap"><strong>Переходники G½"→G¾"</strong> в комплекте</div>
           </div>
