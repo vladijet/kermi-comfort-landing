@@ -658,15 +658,16 @@ const LANDING_HTML = `
   }
   .dot-callout {
     position: absolute; background: #CCFF33; color: #000;
-    padding: 12px 16px; border-radius: 10px; font-size: 13px; line-height: 1.45;
-    max-width: 260px; z-index: 4; opacity: 0; transform: translateX(6px);
+    padding: 10px 14px; border-radius: 4px; font-size: 12px; line-height: 1.3;
+    width: 300px; z-index: 4; opacity: 0; transform: translateX(6px);
     transition: opacity .2s ease, transform .2s ease;
     pointer-events: none; font-weight: 600;
     box-shadow: 0 6px 20px rgba(0,0,0,.35);
     top: 50%;
+    display: flex; align-items: center; gap: 10px;
   }
-  .dot-callout strong { display: block; margin-bottom: 2px; font-size: 13.5px; }
-  .dot-callout .small { font-weight: 500; color: #222; font-size: 12px; display: block; }
+  .dot-callout strong { font-size: 13px; white-space: nowrap; flex-shrink: 0; }
+  .dot-callout .small { font-weight: 500; color: #222; font-size: 11.5px; }
   .puls-dot.is-active + .dot-callout,
   .ir-dot:hover .dot-callout,
   .ir-dot.is-active .dot-callout { opacity: 1; transform: translateX(0) translateY(-50%); }
@@ -674,15 +675,18 @@ const LANDING_HTML = `
   .puls-dot.is-active + .dot-callout-below,
   .ir-dot:hover .dot-callout-below,
   .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(0) translateY(28px); }
-  .dot-callout.has-img { padding: 8px; max-width: 200px; }
-  .dot-callout.has-img img { width: 100%; border-radius: 6px; display: block; }
-  .dot-callout.has-img .cap { padding: 6px 4px 2px; font-size: 12px; }
+  .dot-callout.has-img { padding: 8px; width: 260px; align-items: center; }
+  .dot-callout.has-img img { width: 72px; height: 72px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+  .dot-callout.has-img .cap { padding: 0; font-size: 11.5px; }
   @media (hover: hover) {
     .ir-dot:hover .puls-dot { animation: none; background: var(--lime); border-color: var(--lime); }
     .ir-dot:hover .puls-dot::after { animation: none; opacity: 0; }
   }
   @media (max-width: 768px) {
-    .dot-callout { max-width: 200px; font-size: 12px; }
+    .dot-callout { width: 220px; font-size: 11px; }
+    .dot-callout strong { font-size: 12px; }
+    .dot-callout.has-img { width: 210px; }
+    .dot-callout.has-img img { width: 56px; height: 56px; }
     .puls-dot { width: 22px; height: 22px; }
   }
 
