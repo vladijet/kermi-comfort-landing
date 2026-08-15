@@ -670,6 +670,10 @@ const LANDING_HTML = `
   .puls-dot.is-active + .dot-callout,
   .ir-dot:hover .dot-callout,
   .ir-dot.is-active .dot-callout { opacity: 1; transform: translateX(0) translateY(-50%); }
+  .dot-callout-below { top: auto; bottom: auto; }
+  .puls-dot.is-active + .dot-callout-below,
+  .ir-dot:hover .dot-callout-below,
+  .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(0) translateY(28px); }
   .dot-callout.has-img { padding: 8px; max-width: 200px; }
   .dot-callout.has-img img { width: 100%; border-radius: 6px; display: block; }
   .dot-callout.has-img .cap { padding: 6px 4px 2px; font-size: 12px; }
@@ -997,15 +1001,15 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:22%;top:14%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="left:24px;">
+          <div class="dot-callout dot-callout-below" style="left:0;">
             <strong>Сталь CORREX</strong>
             <span class="small">Северсталь — коррозионная стойкость ×1,5</span>
           </div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:94%;top:18%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:97%;top:14%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="right:24px;text-align:right;">
+          <div class="dot-callout dot-callout-below" style="right:0;text-align:left;">
             <strong>Оригинальный термовентиль</strong>
             <span class="small">KERMI V3-Ks, предустановлен на заводе</span>
           </div>
@@ -1013,7 +1017,7 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:48%;top:40%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="left:24px;">
+          <div class="dot-callout dot-callout-below" style="left:0;">
             <strong>Покрытие премиум-класса</strong>
             <span class="small">Титаноцирконевая пассивация — защита ×2 · Толщина ЛКП — 100 мкм</span>
           </div>
@@ -1021,15 +1025,15 @@ const LANDING_HTML = `
 
         <div class="ir-dot" style="position:absolute;left:46%;top:84%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout" style="left:24px;">
+          <div class="dot-callout dot-callout-below" style="left:0;">
             <strong>Шаг длины 100 мм</strong>
             <span class="small">от 400 до 3000 мм — точный подбор под любой проём</span>
           </div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:90%;top:94%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:93%;top:97%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout has-img" style="right:24px;">
+          <div class="dot-callout has-img dot-callout-below" style="right:0;">
             <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/7b0983afa_Group547.png" alt="Переходники G½→G¾">
             <div class="cap"><strong>Переходники G½"→G¾"</strong> в комплекте</div>
           </div>
