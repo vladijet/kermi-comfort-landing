@@ -664,7 +664,7 @@ const LANDING_HTML = `
     top: 50%;
     display: flex; align-items: center; gap: 10px;
   }
-  .dot-callout strong { font-size: 13px; white-space: nowrap; flex-shrink: 0; }
+  .dot-callout strong { font-size: 13px; flex-shrink: 0; }
   .dot-callout .small { font-weight: 500; color: #222; font-size: 11.5px; }
   .puls-dot.is-active + .dot-callout,
   .ir-dot:hover .dot-callout,
