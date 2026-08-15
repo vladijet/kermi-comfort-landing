@@ -122,7 +122,7 @@ const LANDING_HTML = `
     display: flex; flex-direction: column; align-items: center; gap: 28px;
   }
   .hero-right img {
-    width: 100%; max-width: 760px;
+    width: 100%; max-width: 874px;
     filter: drop-shadow(0 20px 60px rgba(0,0,0,.55));
     display: block;
   }
@@ -826,7 +826,6 @@ const LANDING_HTML = `
 
 <!-- ========== HERO ========== -->
 <div id="hero" class="hero" style="padding: 64px 48px; min-height: 520px; align-items: center;">
-  <div class="hero-bg-accent"></div>
   <div class="hero-inner">
     <div class="hero-content" style="max-width:100%;">
       <div class="hero-tag">Новинка 2026</div>
@@ -841,20 +840,6 @@ const LANDING_HTML = `
     </div>
     <div class="hero-right">
       <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/97da36693____2.png" alt="Радиатор Kermi Комфорт">
-      <div class="hero-stats-row">
-        <div class="stat">
-          <div class="stat-val">15</div>
-          <div class="stat-lbl">лет гарантии</div>
-        </div>
-        <div class="stat">
-          <div class="stat-val">150+</div>
-          <div class="stat-lbl">цветов RAL</div>
-        </div>
-        <div class="stat">
-          <div class="stat-val">25</div>
-          <div class="stat-lbl">лет службы</div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
