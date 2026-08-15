@@ -1672,7 +1672,7 @@ const LANDING_HTML = `
     <div class="divider"></div>
   </div>
   <div id="kermi-widget-cafdc5eb" style="max-width:1100px;margin:0 auto;">
-    <iframe src="https://comfort.kermi-configurator.com/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363" style="width:100%;height:600px;border:0;display:block;" title="Kermi Comfort — подбор радиаторов"></iframe>
+    <iframe src="https://comfort.kermi-configurator.com/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363" style="width:100%;height:600px;border:0;display:block;border-radius:12px;overflow:hidden;" title="Kermi Comfort — подбор радиаторов"></iframe>
   </div>
 </section>
 
