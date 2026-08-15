@@ -1983,12 +1983,32 @@ export default function Home() {
 
     // ===== Interactive Radiator: tap toggle (mobile / touch) =====
     const irDots = document.querySelectorAll('.ir-dot');
+    const clampCallout = (callout) => {
+      if (!callout || window.innerWidth > 768) return;
+      const rect = callout.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const pad = 8;
+      let shiftX = 0;
+      if (rect.left < pad) shiftX = pad - rect.left;
+      else if (rect.right > vw - pad) shiftX = (vw - pad) - rect.right;
+      const base = callout.classList.contains('dot-callout-below')
+        ? 'translateX(-50%) translateY(28px)'
+        : 'translateX(-50%) translateY(-50%)';
+      callout.style.transform = shiftX ? base + ' translateX(' + shiftX + 'px)' : base;
+    };
     irDots.forEach(dot => {
       const handler = (e) => {
         e.stopPropagation();
         const wasActive = dot.classList.contains('is-active');
-        irDots.forEach(d => d.classList.remove('is-active'));
-        if (!wasActive) dot.classList.add('is-active');
+        irDots.forEach(d => {
+          d.classList.remove('is-active');
+          const c = d.querySelector('.dot-callout');
+          if (c) c.style.transform = '';
+        });
+        if (!wasActive) {
+          dot.classList.add('is-active');
+          requestAnimationFrame(() => clampCallout(dot.querySelector('.dot-callout')));
+        }
       };
       dot.addEventListener('click', handler);
     });
