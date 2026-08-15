@@ -1038,7 +1038,7 @@ const LANDING_HTML = `
         <div class="ir-dot" style="position:absolute;left:93%;top:97%;width:0;height:0;">
           <div class="puls-dot"></div>
           <div class="dot-callout has-img dot-callout-below">
-            <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/7b0983afa_Group547.png" alt="Переходники G½→G¾">
+            <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/6e187b1d1_.png" alt="Переходники G½→G¾">
             <div class="cap"><strong>Переходники G½"→G¾"</strong> в комплекте</div>
           </div>
         </div>
