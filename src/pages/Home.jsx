@@ -630,8 +630,8 @@ const LANDING_HTML = `
   }
   .ir-stage {
     position: relative; width: 100%; max-width: 680px;
-    background: #f4f4f4; border-radius: 14px; overflow: hidden;
-    box-shadow: 0 8px 28px rgba(0,0,0,.08);
+    background: transparent; border-radius: 14px; overflow: visible;
+    box-shadow: none;
   }
   .ir-stage img.radiator { width: 100%; display: block; }
   .puls-dot {
