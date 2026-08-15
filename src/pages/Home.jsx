@@ -619,6 +619,67 @@ const LANDING_HTML = `
   .mt-16 { margin-top: 16px; }
   .mb-0 { margin-bottom: 0; }
 
+  /* ========== INTERACTIVE RADIATOR (Преимущества) ========== */
+  .compare { background: #1a1a1a; color: var(--white); }
+  .compare h2 { color: var(--white); }
+  .compare .lead { color: #ccc; }
+  .compare .divider { background: var(--lime); }
+  .ir-wrap {
+    position: relative; margin: 48px auto 0; max-width: 760px;
+    display: flex; justify-content: center;
+  }
+  .ir-stage {
+    position: relative; width: 100%; max-width: 680px;
+    background: #0e0e0e; border-radius: 14px; overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  }
+  .ir-stage img.radiator { width: 100%; display: block; }
+  .puls-dot {
+    position: absolute; width: 18px; height: 18px; border-radius: 50%;
+    background: #666; border: 2px solid #fff; cursor: pointer;
+    transform: translate(-50%, -50%); z-index: 3;
+    animation: pulseDot 1.8s ease-in-out infinite;
+  }
+  .puls-dot::after {
+    content: ''; position: absolute; inset: -6px; border-radius: 50%;
+    border: 2px solid rgba(204,255,51,.6);
+    animation: pulseRing 1.8s ease-out infinite;
+  }
+  .puls-dot.is-active { animation: none; background: var(--lime); border-color: var(--lime); }
+  .puls-dot.is-active::after { animation: none; opacity: 0; }
+  @keyframes pulseDot {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: .9; }
+    50% { transform: translate(-50%, -50%) scale(1.18); opacity: 1; }
+  }
+  @keyframes pulseRing {
+    0% { transform: scale(.8); opacity: .8; }
+    100% { transform: scale(1.8); opacity: 0; }
+  }
+  .dot-callout {
+    position: absolute; background: #CCFF33; color: #000;
+    padding: 12px 16px; border-radius: 10px; font-size: 13px; line-height: 1.45;
+    max-width: 260px; z-index: 4; opacity: 0; transform: translateY(6px);
+    transition: opacity .2s ease, transform .2s ease;
+    pointer-events: none; font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0,0,0,.35);
+  }
+  .dot-callout strong { display: block; margin-bottom: 2px; font-size: 13.5px; }
+  .dot-callout .small { font-weight: 500; color: #222; font-size: 12px; display: block; }
+  .puls-dot.is-active + .dot-callout,
+  .ir-dot:hover .dot-callout,
+  .ir-dot.is-active .dot-callout { opacity: 1; transform: translateY(0); }
+  .dot-callout.has-img { padding: 8px; max-width: 200px; }
+  .dot-callout.has-img img { width: 100%; border-radius: 6px; display: block; }
+  .dot-callout.has-img .cap { padding: 6px 4px 2px; font-size: 12px; }
+  @media (hover: hover) {
+    .ir-dot:hover .puls-dot { animation: none; background: var(--lime); border-color: var(--lime); }
+    .ir-dot:hover .puls-dot::after { animation: none; opacity: 0; }
+  }
+  @media (max-width: 768px) {
+    .dot-callout { max-width: 200px; font-size: 12px; }
+    .puls-dot { width: 16px; height: 16px; }
+  }
+
   /* ========== MOBILE BURGER MENU ========== */
   .nav-burger {
     display: none;
@@ -927,62 +988,51 @@ const LANDING_HTML = `
     <div class="section-tag">Преимущества</div>
     <h2>Преимущества<br>Керми Комфорт</h2>
     <div class="divider"></div>
-    <p class="lead">Серия «Комфорт» — новая линейка стальных панельных радиаторов, компании Керми, которая разработана на основе обратной связи от российских клиентов. Учтены пожелания как по типоразмерам, продленной гарантии, удобству монтажа и срокам поставки.</p>
-    <div class="compare-table">
-      <table>
-        <thead>
-          <tr>
-            <th style="width:40%">Параметр</th>
-            <th>Преимущества и особенности</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Марка стали</td>
-            <td class="td-good">CORREX (Северсталь) — коррозионная стойкость ×1,5</td>
-          </tr>
-          <tr>
-            <td>Предобработка перед покраской</td>
-            <td class="td-good">Титаноцирконевая пассивация — защита ×2</td>
-          </tr>
-          <tr>
-            <td>Метод покраски</td>
-            <td class="td-good">Порошковая эпокси-полиэфирная, электростатика + печь (100 мкм)</td>
-          </tr>
-          <tr>
-            <td>Толщина лакокрасочного слоя</td>
-            <td class="td-good">100 мкм</td>
-          </tr>
-          <tr>
-            <td>Цвет / палитра</td>
-            <td class="td-good">150+ цветов RAL, глянец и матт (+50% к цене)</td>
-          </tr>
-          <tr>
-            <td>Гарантия</td>
-            <td class="td-good">15 лет</td>
-          </tr>
-          <tr>
-            <td>Производственная линия</td>
-            <td class="td-good">Новая LEAS (Италия) — менее 1 года в эксплуатации</td>
-          </tr>
-          <tr>
-            <td>Расположение патрубков (тип 30/33)</td>
-            <td class="td-good">Ближе к стене (51 мм) — эстетика и комфорт подключения</td>
-          </tr>
-          <tr>
-            <td>Переходники G½"→G¾"</td>
-            <td class="td-good">В комплекте</td>
-          </tr>
-          <tr>
-            <td>Шаг длины</td>
-            <td class="td-good">100 мм от 400 до 3000 мм — точный подбор под любой проём</td>
-          </tr>
-          <tr>
-            <td>Гигиена с вентилем (PTV/PK0)</td>
-            <td class="td-good">H = 300 и 500 мм</td>
-          </tr>
-        </tbody>
-      </table>
+    <p class="lead">Серия «Комфорт» — новая линейка стальных панельных радиаторов, компании Керми, которая разработана на основе обратной связи от российских клиентов. Наведите курсор на пульсирующую точку (или тапните на мобильном), чтобы узнать о преимуществах радиаторов KERMI Комфорт.</p>
+    <div class="ir-wrap">
+      <div class="ir-stage">
+        <img class="radiator" src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/1231db876_KermiComfortFTV22_500x800_34_3_land.png" alt="Радиатор Kermi Комфорт">
+
+        <div class="ir-dot" style="position:absolute;left:22%;top:14%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout" style="left:18px;top:-6px;">
+            <strong>Сталь CORREX</strong>
+            <span class="small">Северсталь — коррозионная стойкость ×1,5</span>
+          </div>
+        </div>
+
+        <div class="ir-dot" style="position:absolute;left:80%;top:10%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout" style="right:18px;top:-6px;text-align:right;">
+            <strong>Оригинальный термовентиль</strong>
+            <span class="small">KERMI V3-Ks, предустановлен на заводе</span>
+          </div>
+        </div>
+
+        <div class="ir-dot" style="position:absolute;left:48%;top:40%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout" style="left:18px;top:-6px;">
+            <strong>Покрытие премиум-класса</strong>
+            <span class="small">Титаноцирконевая пассивация — защита ×2 · Толщина ЛКП — 100 мкм</span>
+          </div>
+        </div>
+
+        <div class="ir-dot" style="position:absolute;left:46%;top:84%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout" style="left:18px;bottom:-6px;">
+            <strong>Шаг длины 100 мм</strong>
+            <span class="small">от 400 до 3000 мм — точный подбор под любой проём</span>
+          </div>
+        </div>
+
+        <div class="ir-dot" style="position:absolute;left:82%;top:82%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout has-img" style="right:14px;bottom:-6px;">
+            <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/7b0983afa_Group547.png" alt="Переходники G½→G¾">
+            <div class="cap"><strong>Переходники G½"→G¾"</strong> в комплекте</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1921,6 +1971,18 @@ export default function Home() {
       }
     };
     window.addEventListener('message', handleIframeMessage);
+
+    // ===== Interactive Radiator: tap toggle (mobile / touch) =====
+    const irDots = document.querySelectorAll('.ir-dot');
+    irDots.forEach(dot => {
+      const handler = (e) => {
+        e.stopPropagation();
+        const wasActive = dot.classList.contains('is-active');
+        irDots.forEach(d => d.classList.remove('is-active'));
+        if (!wasActive) dot.classList.add('is-active');
+      };
+      dot.addEventListener('click', handler);
+    });
 
     // ===== Scroll Spy =====
     const sections = document.querySelectorAll('section[id], div[id="hero"]');
