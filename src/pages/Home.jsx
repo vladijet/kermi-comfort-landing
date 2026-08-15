@@ -841,7 +841,7 @@ const LANDING_HTML = `
       </div>
     </div>
     <div class="hero-right">
-      <img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/0051696a0_.png" alt="Радиатор Kermi Комфорт">
+      <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/383e38234___.png" alt="Радиатор Kermi Комфорт">
       <div class="hero-stats-row">
         <div class="stat">
           <div class="stat-val">15</div>
