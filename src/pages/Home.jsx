@@ -1671,12 +1671,8 @@ const LANDING_HTML = `
     <h2>Конфигуратор подбора Керми Комфорт</h2>
     <div class="divider"></div>
   </div>
-  <div style="width:100%;margin-top:40px;">
-    <iframe
-      id="kermiConfigIframe"
-      src="https://kermi-heat-pick.base44.app/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363"
-      style="width:100%;height:600px;border:0;display:block;transition:height .3s ease;border-radius:12px;overflow:hidden;"
-      title="Kermi Comfort — подбор радиаторов"></iframe>
+  <div id="kermi-widget-cafdc5eb" style="max-width:1100px;margin:0 auto;">
+    <iframe src="https://comfort.kermi-configurator.com/embed?uid=cafdc5eb-2a56-4b25-b884-d5b640c92363" style="width:100%;height:600px;border:0;display:block;" title="Kermi Comfort — подбор радиаторов"></iframe>
   </div>
 </section>
 
@@ -1932,7 +1928,7 @@ export default function Home() {
     // ===== Iframe Auto Height =====
     const handleIframeMessage = (event) => {
       if (event.data && event.data.type === 'setIframeHeight') {
-        const iframe = document.getElementById('kermiConfigIframe');
+        const iframe = document.querySelector('#kermi-widget-cafdc5eb iframe');
         if (iframe && event.data.height > 0) {
           iframe.style.height = event.data.height + 'px';
         }
