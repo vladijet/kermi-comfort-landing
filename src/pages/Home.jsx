@@ -655,37 +655,32 @@ const LANDING_HTML = `
     100% { transform: scale(1.9); opacity: 0; }
   }
   .dot-callout {
-    position: absolute; background: #CCFF33; color: #000;
-    padding: 10px 14px; border-radius: 4px; font-size: 12px; line-height: 1.3;
-    width: 300px; z-index: 4; opacity: 0; transform: translateX(6px);
+    position: absolute; background: #CCFF00; color: #000;
+    padding: 12px 22px; border-radius: 30px; font-size: 14px; line-height: 1.4;
+    max-width: 320px; width: max-content; z-index: 4; opacity: 0; transform: translateX(6px);
     transition: opacity .2s ease, transform .2s ease;
-    pointer-events: none; font-weight: 600;
+    pointer-events: none; font-weight: 600; text-align: center;
     box-shadow: 0 6px 20px rgba(0,0,0,.35);
-    top: 50%;
-    display: flex; align-items: center; gap: 10px;
+    top: 50%; left: 50%;
   }
-  .dot-callout strong { font-size: 13px; flex-shrink: 0; }
-  .dot-callout .small { font-weight: 500; color: #222; font-size: 11.5px; }
   .puls-dot.is-active + .dot-callout,
   .ir-dot:hover .dot-callout,
   .ir-dot.is-active .dot-callout { opacity: 1; transform: translateX(-50%) translateY(-50%); }
-  .dot-callout-below { top: auto; bottom: auto; left: 50%; }
+  .dot-callout-below { top: auto; bottom: auto; }
   .puls-dot.is-active + .dot-callout-below,
   .ir-dot:hover .dot-callout-below,
   .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(-50%) translateY(28px); }
-  .dot-callout.has-img { padding: 10px; width: 420px; align-items: center; gap: 14px; }
-  .dot-callout.has-img img { width: 144px; height: 144px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
-  .dot-callout.has-img .cap { padding: 0; font-size: 11.5px; }
+  .dot-callout.has-img { padding: 12px; max-width: 220px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .dot-callout.has-img img { width: 120px; height: 120px; object-fit: contain; border-radius: 12px; flex-shrink: 0; }
+  .dot-callout.has-img .cap { font-size: 14px; line-height: 1.3; text-align: center; }
   @media (hover: hover) {
     .ir-dot:hover .puls-dot { animation: none; background: var(--lime); border-color: var(--lime); }
     .ir-dot:hover .puls-dot::after { animation: none; opacity: 0; }
   }
   @media (max-width: 768px) {
-    .dot-callout { width: 220px; font-size: 11px; }
-    .dot-callout:not(.has-img) { flex-direction: column; align-items: flex-start; gap: 4px; }
-    .dot-callout strong { font-size: 12px; }
-    .dot-callout.has-img { width: 280px; }
-    .dot-callout.has-img img { width: 112px; height: 112px; }
+    .dot-callout { max-width: 240px; }
+    .dot-callout.has-img { max-width: 190px; }
+    .dot-callout.has-img img { width: 96px; height: 96px; }
     .puls-dot { width: 22px; height: 22px; }
   }
 
@@ -1002,43 +997,41 @@ const LANDING_HTML = `
       <div class="ir-stage">
         <img class="radiator" src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/1231db876_KermiComfortFTV22_500x800_34_3_land.png" alt="Радиатор Kermi Комфорт">
 
-        <div class="ir-dot" style="position:absolute;left:22%;top:14%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:20%;top:12%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below">
-            <strong>Сталь CORREX</strong>
-            <span class="small">Северсталь — коррозионная стойкость ×1,5</span>
-          </div>
+          <div class="dot-callout dot-callout-below">Сталь CORREX (Северсталь) — коррозионная стойкость ×1,5</div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:97%;top:14%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:10%;top:46%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below">
-            <strong>Оригинальный термовентиль</strong>
-            <span class="small">KERMI V3-Ks, предустановлен на заводе</span>
-          </div>
+          <div class="dot-callout dot-callout-below">Окраска в любой цвет RAL</div>
         </div>
 
         <div class="ir-dot" style="position:absolute;left:48%;top:40%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below">
-            <strong>Покрытие премиум-класса</strong>
-            <span class="small">Титаноцирконевая пассивация — защита ×2 · Толщина ЛКП — 100 мкм</span>
-          </div>
+          <div class="dot-callout dot-callout-below">Титаноцирконевая пассивация поверхности перед покраской увеличивает защиту от коррозии в 2 раза</div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:46%;top:84%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:50%;top:66%;width:0;height:0;">
           <div class="puls-dot"></div>
-          <div class="dot-callout dot-callout-below">
-            <strong>Шаг длины 100 мм</strong>
-            <span class="small">от 400 до 3000 мм — точный подбор под любой проём</span>
-          </div>
+          <div class="dot-callout dot-callout-below">Толщина лакокрасочного слоя — 100 мкм</div>
         </div>
 
-        <div class="ir-dot" style="position:absolute;left:93%;top:97%;width:0;height:0;">
+        <div class="ir-dot" style="position:absolute;left:40%;top:86%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout dot-callout-below">Шаг длины 100 мм от 400 до 3000 мм — точный подбор под любой проём</div>
+        </div>
+
+        <div class="ir-dot" style="position:absolute;left:96%;top:12%;width:0;height:0;">
+          <div class="puls-dot"></div>
+          <div class="dot-callout dot-callout-below">Оригинальный термовентиль KERMI V3-Ks</div>
+        </div>
+
+        <div class="ir-dot" style="position:absolute;left:90%;top:86%;width:0;height:0;">
           <div class="puls-dot"></div>
           <div class="dot-callout has-img dot-callout-below">
             <img src="https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/6e187b1d1_.png" alt="Переходники G½→G¾">
-            <div class="cap"><strong>Переходники G½"→G¾"</strong> в комплекте</div>
+            <div class="cap">Переходники G½"→G¾" в комплекте</div>
           </div>
         </div>
       </div>
