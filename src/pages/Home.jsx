@@ -833,7 +833,6 @@ const LANDING_HTML = `
       <h1>Стальные панельные<br>радиаторы<br><span>KERMI Комфорт</span></h1>
       <p class="hero-sub">
         Производство в России по лицензии KERMI GmbH на новейшей автоматизированной линии.
-        Новое поколение — сталь CORREX, 100 мкм покрытие, 150+ цветов RAL, гарантия 15 лет.
       </p>
       <div class="hero-btns">
         <a href="#models" class="btn-primary">Смотреть модели</a>
