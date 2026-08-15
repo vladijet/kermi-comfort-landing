@@ -670,17 +670,17 @@ const LANDING_HTML = `
   .puls-dot.is-active + .dot-callout-below,
   .ir-dot:hover .dot-callout-below,
   .ir-dot.is-active .dot-callout-below { opacity: 1; transform: translateX(-50%) translateY(28px); }
-  .dot-callout.has-img { padding: 12px; max-width: 220px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .dot-callout.has-img img { width: 120px; height: 120px; object-fit: contain; border-radius: 12px; flex-shrink: 0; }
-  .dot-callout.has-img .cap { font-size: 14px; line-height: 1.3; text-align: center; }
+  .dot-callout.has-img { padding: 16px 16px 18px; width: 260px; max-width: 260px; border-radius: 30px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .dot-callout.has-img img { width: 228px; height: 180px; object-fit: cover; border-radius: 18px; flex-shrink: 0; }
+  .dot-callout.has-img .cap { font-size: 14px; line-height: 1.3; text-align: center; font-weight: 600; }
   @media (hover: hover) {
     .ir-dot:hover .puls-dot { animation: none; background: var(--lime); border-color: var(--lime); }
     .ir-dot:hover .puls-dot::after { animation: none; opacity: 0; }
   }
   @media (max-width: 768px) {
     .dot-callout { max-width: 240px; }
-    .dot-callout.has-img { max-width: 190px; }
-    .dot-callout.has-img img { width: 96px; height: 96px; }
+    .dot-callout.has-img { width: 220px; max-width: 220px; padding: 12px 12px 14px; gap: 10px; }
+    .dot-callout.has-img img { width: 196px; height: 150px; border-radius: 14px; }
     .puls-dot { width: 22px; height: 22px; }
   }
 
