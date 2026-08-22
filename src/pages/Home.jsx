@@ -1895,7 +1895,7 @@ const LANDING_HTML = `
     <h4>Инструменты</h4>
     <ul>
       <li><span style="font-size:13px;color:#999;cursor:default;">Онлайн-конфигуратор</span></li>
-      <li><a href="https://www.kermi.com/ru/ru/" target="_blank" rel="noopener">BIM-модели и 3D-данные</a></li>
+      <li><a href="https://disk.yandex.ru/d/FlWD9_j8s9_ViA" target="_blank" rel="noopener">BIM-модели и 3D-данные</a></li>
       <li><a href="https://www.kermi.com/ru/ru/" target="_blank" rel="noopener">Портал для партнёров</a></li>
       <li><a href="https://www.kermi.com/ru/ru/" target="_blank" rel="noopener">Скачать документы</a></li>
     </ul>
