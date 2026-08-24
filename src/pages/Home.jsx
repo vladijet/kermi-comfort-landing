@@ -1731,9 +1731,9 @@ const LANDING_HTML = `
         <div style="margin-top:24px;font-size:13px;">
           <strong style="display:block;margin-bottom:8px">Как заказать цветной радиатор:</strong>
           <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV22050040<span style="background:#BFDE05;border-radius:3px;padding:0 2px;font-weight:700">1</span>R2C<span style="background:#BFDE05;border-radius:3px;padding:0 2px;font-weight:700">RAL7022</span></code>
-          <span style="color:var(--grey)">Глянец (код «1») + суффикс RAL</span>
+          <span style="color:var(--grey)">Глянцевый (код «1») + суффикс RAL</span>
           <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV22050040<span style="background:#BFDE05;border-radius:3px;padding:0 2px;font-weight:700">2</span>R2C<span style="background:#BFDE05;border-radius:3px;padding:0 2px;font-weight:700">RAL7022</span></code>
-          <span style="color:var(--grey)">Мат (код «2» на позиции цвета) + суффикс RAL</span>
+          <span style="color:var(--grey)">Матовый (код «2» на позиции цвета) + суффикс RAL</span>
         </div>
       </div>
       <div>
