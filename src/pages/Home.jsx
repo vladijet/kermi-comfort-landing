@@ -1730,9 +1730,9 @@ const LANDING_HTML = `
         </div>
         <div style="margin-top:24px;font-size:13px;">
           <strong style="display:block;margin-bottom:8px">Как заказать цветной радиатор:</strong>
-          <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV22050040<strong style="color:var(--lime)">1</strong>R2C<strong>RAL7022</strong></code>
+          <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV22050040<strong>1</strong>R2C<strong>RAL7022</strong></code>
           <span style="color:var(--grey)">Глянец (код «1») + суффикс RAL</span>
-          <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV22050040<strong style="color:var(--lime)">2</strong>R2C<strong>RAL7022</strong></code>
+          <code style="display:block;padding:8px 12px;margin:6px 0;font-size:13px;">FTV22050040<strong>2</strong>R2C<strong>RAL7022</strong></code>
           <span style="color:var(--grey)">Мат (код «2» на позиции цвета) + суффикс RAL</span>
         </div>
       </div>
