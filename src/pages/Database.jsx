@@ -157,7 +157,7 @@ export default function Database() {
       <style>{SECTION_STYLE}</style>
 
       <div className="db-hero">
-        <img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/26e20f0a6_Kermi-Logo_t.png" alt="KERMI" style={{ height: '56px', width: 'auto', filter: 'brightness(0) invert(1)', marginBottom: '20px' }} />
+        <img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/26e20f0a6_Kermi-Logo_t.png" alt="KERMI" style={{ height: '56px', width: 'auto', filter: 'brightness(0) invert(1)', marginBottom: '20px', display: 'block', margin: '0 auto 20px' }} />
         <h1>Материалы и ресурсы KERMI</h1>
         <p>Фотобанк, полиграфия и BIM-модели для проектировщиков, дилеров и партнёров.</p>
       </div>
