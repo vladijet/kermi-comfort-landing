@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Download } from 'lucide-react';
+import { Download, ChevronDown } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 
 const LIME = '#BFDE00';
@@ -8,6 +8,13 @@ const SECTIONS = [
   { key: 'Фотобанк', label: 'Фотобанк' },
   { key: 'Полиграфия', label: 'Буклеты и прайсы' },
   { key: 'BIM', label: 'BIM модели' },
+];
+const PHOTOBANK_SUBSECTIONS = [
+  'Логотип',
+  'Панельные радиаторы',
+  'Трубчатые радиаторы',
+  'Внутрипольные конвекторы',
+  'Напольные конвекторы',
 ];
 
 const SECTION_STYLE = `
@@ -49,6 +56,31 @@ const SECTION_STYLE = `
   .db-item.is-dim .db-item-text { color: #666; }
   .db-item.is-dim .db-item-icon { color: #444; }
 
+  /* ===== Accordion (Фотобанк subsections) ===== */
+  .db-accordion { display: flex; flex-direction: column; }
+  .db-sub { border-bottom: 1px solid #2a2a2a; }
+  .db-sub:last-child { border-bottom: none; }
+  .db-sub-head {
+    display: flex; align-items: center; justify-content: space-between;
+    width: 100%; padding: 16px 4px; background: transparent; border: none;
+    cursor: pointer; color: #fff; font-family: inherit;
+    transition: color .2s, background .2s;
+  }
+  .db-sub-head:hover { color: ${LIME}; }
+  .db-sub-title { font-size: 16px; font-weight: 700; letter-spacing: .3px; text-align: left; }
+  .db-sub-chev { color: #888; transition: transform .25s ease, color .2s; flex-shrink: 0; }
+  .db-sub-chev.is-open { transform: rotate(180deg); color: ${LIME}; }
+  .db-sub .db-list { padding: 4px 0 12px; }
+  .db-sub-empty { padding: 10px 4px 14px; font-size: 13px; color: #555; font-style: italic; }
+
+  /* ===== Hover preview tooltip ===== */
+  .db-preview {
+    position: fixed; z-index: 9999; pointer-events: none;
+    background: #111; border: 1px solid #333; border-radius: 10px;
+    padding: 8px; box-shadow: 0 8px 32px rgba(0,0,0,.7);
+  }
+  .db-preview img { width: 240px; max-height: 240px; object-fit: contain; border-radius: 6px; display: block; }
+
   .db-loading { text-align: center; padding: 64px 20px; color: #888; font-size: 15px; }
   .db-spinner {
     width: 32px; height: 32px; border: 3px solid #2a2a2a; border-top-color: ${LIME};
@@ -61,6 +93,8 @@ const SECTION_STYLE = `
     .db-body { padding: 20px 20px 48px; }
     .db-section-title { font-size: 19px; }
     .db-item-text { font-size: 14px; }
+    .db-sub-title { font-size: 15px; }
+    .db-preview img { width: 180px; max-height: 180px; }
   }
 `;
 
@@ -68,6 +102,8 @@ export default function Database() {
   const [assetsBySection, setAssetsBySection] = useState({});
   const [loading, setLoading] = useState(true);
   const [resolvingId, setResolvingId] = useState(null);
+  const [openSub, setOpenSub] = useState(null);
+  const [preview, setPreview] = useState(null);
 
   const handleYandexDownload = async (asset) => {
     if (resolvingId) return;
@@ -84,6 +120,62 @@ export default function Database() {
     } finally {
       setResolvingId(null);
     }
+  };
+
+  const hoverProps = (asset) => {
+    if (!asset.preview_image_url) return {};
+    return {
+      onMouseEnter: (e) => setPreview({ url: asset.preview_image_url, x: e.clientX, y: e.clientY }),
+      onMouseMove: (e) => setPreview({ url: asset.preview_image_url, x: e.clientX, y: e.clientY }),
+      onMouseLeave: () => setPreview(null),
+    };
+  };
+
+  const renderAssetItem = (asset) => {
+    const hasFile = Boolean(asset.file_url);
+    const hp = hoverProps(asset);
+    if (hasFile && asset.file_url.startsWith('yandex:')) {
+      const isResolving = resolvingId === asset.id;
+      return (
+        <div
+          className="db-item is-link"
+          key={asset.id}
+          onClick={() => handleYandexDownload(asset)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleYandexDownload(asset); } }}
+          {...hp}
+        >
+          <span className="db-item-row">
+            <Download className="db-item-icon" size={16} strokeWidth={2} />
+            <span className="db-item-text">{isResolving ? asset.title + ' (подготовка…)' : asset.title}</span>
+          </span>
+        </div>
+      );
+    }
+    return hasFile ? (
+      <a
+        className="db-item is-link"
+        key={asset.id}
+        href={asset.file_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        download
+        {...hp}
+      >
+        <span className="db-item-row">
+          <Download className="db-item-icon" size={16} strokeWidth={2} />
+          <span className="db-item-text">{asset.title}</span>
+        </span>
+      </a>
+    ) : (
+      <div className="db-item is-dim" key={asset.id} {...hp}>
+        <span className="db-item-row">
+          <Download className="db-item-icon" size={16} strokeWidth={2} />
+          <span className="db-item-text">{asset.title}</span>
+        </span>
+      </div>
+    );
   };
 
   useEffect(() => {
@@ -109,6 +201,13 @@ export default function Database() {
     return () => { mounted = false; };
   }, []);
 
+  const photoBySub = {};
+  (assetsBySection['Фотобанк'] || []).forEach(a => {
+    const sub = a.subsection || 'Без подраздела';
+    if (!photoBySub[sub]) photoBySub[sub] = [];
+    photoBySub[sub].push(a);
+  });
+
   return (
     <div className="db-page">
       <style>{SECTION_STYLE}</style>
@@ -128,6 +227,43 @@ export default function Database() {
         <div className="db-body">
           {SECTIONS.map(sec => {
             const items = assetsBySection[sec.key] || [];
+
+            if (sec.key === 'Фотобанк') {
+              return (
+                <div className="db-section" key={sec.key}>
+                  <div className="db-section-head">
+                    <div className="db-section-title">{sec.label}</div>
+                  </div>
+                  <div className="db-accordion">
+                    {PHOTOBANK_SUBSECTIONS.map(sub => {
+                      const subItems = photoBySub[sub] || [];
+                      const isOpen = openSub === sub;
+                      return (
+                        <div className="db-sub" key={sub}>
+                          <button
+                            className="db-sub-head"
+                            type="button"
+                            onClick={() => setOpenSub(isOpen ? null : sub)}
+                            aria-expanded={isOpen}
+                          >
+                            <span className="db-sub-title">{sub}</span>
+                            <ChevronDown className={`db-sub-chev${isOpen ? ' is-open' : ''}`} size={20} strokeWidth={2} />
+                          </button>
+                          {isOpen && (
+                            <div className="db-list">
+                              {subItems.length === 0 ? (
+                                <div className="db-sub-empty">Файлов пока нет</div>
+                              ) : subItems.map(asset => renderAssetItem(asset))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            }
+
             if (items.length === 0) return null;
             return (
               <div className="db-section" key={sec.key}>
@@ -135,53 +271,17 @@ export default function Database() {
                   <div className="db-section-title">{sec.label}</div>
                 </div>
                 <div className="db-list">
-                  {items.map(asset => {
-                    const hasFile = Boolean(asset.file_url);
-                    if (hasFile && asset.file_url.startsWith('yandex:')) {
-                      const isResolving = resolvingId === asset.id;
-                      return (
-                        <div
-                          className="db-item is-link"
-                          key={asset.id}
-                          onClick={() => handleYandexDownload(asset)}
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleYandexDownload(asset); } }}
-                        >
-                          <span className="db-item-row">
-                            <Download className="db-item-icon" size={16} strokeWidth={2} />
-                            <span className="db-item-text">{isResolving ? asset.title + ' (подготовка…)' : asset.title}</span>
-                          </span>
-                        </div>
-                      );
-                    }
-                    return hasFile ? (
-                      <a
-                        className="db-item is-link"
-                        key={asset.id}
-                        href={asset.file_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        download
-                      >
-                        <span className="db-item-row">
-                          <Download className="db-item-icon" size={16} strokeWidth={2} />
-                          <span className="db-item-text">{asset.title}</span>
-                        </span>
-                      </a>
-                    ) : (
-                      <div className="db-item is-dim" key={asset.id}>
-                        <span className="db-item-row">
-                          <Download className="db-item-icon" size={16} strokeWidth={2} />
-                          <span className="db-item-text">{asset.title}</span>
-                        </span>
-                      </div>
-                    );
-                  })}
+                  {items.map(asset => renderAssetItem(asset))}
                 </div>
               </div>
             );
           })}
+        </div>
+      )}
+
+      {preview && (
+        <div className="db-preview" style={{ left: preview.x + 18, top: preview.y + 18 }}>
+          <img src={preview.url} alt="" />
         </div>
       )}
     </div>
