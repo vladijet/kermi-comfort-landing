@@ -77,6 +77,24 @@ const SECTION_STYLE = `
 export default function Database() {
   const [assetsBySection, setAssetsBySection] = useState({});
   const [loading, setLoading] = useState(true);
+  const [resolvingId, setResolvingId] = useState(null);
+
+  const handleYandexDownload = async (asset) => {
+    if (resolvingId) return;
+    setResolvingId(asset.id);
+    try {
+      const res = await base44.functions.invoke('ResolveYandexDownload', {
+        public_key: asset.file_url.slice('yandex:'.length)
+      });
+      const href = res?.data?.href;
+      if (!href) throw new Error('Не удалось получить ссылку для скачивания');
+      window.location.href = href;
+    } catch (e) {
+      alert('Ошибка при подготовке скачивания: ' + (e?.message || e));
+    } finally {
+      setResolvingId(null);
+    }
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -130,6 +148,23 @@ export default function Database() {
                 <div className="db-list">
                   {items.map(asset => {
                     const hasFile = Boolean(asset.file_url);
+                    if (hasFile && asset.file_url.startsWith('yandex:')) {
+                      const isResolving = resolvingId === asset.id;
+                      return (
+                        <div
+                          className="db-item is-link"
+                          key={asset.id}
+                          onClick={() => handleYandexDownload(asset)}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleYandexDownload(asset); } }}
+                        >
+                          <span className="db-item-icon">{isResolving ? '…' : '⬇'}</span>
+                          <span className="db-item-text">{asset.title}</span>
+                          <span className="db-item-arrow">{isResolving ? 'подготовка…' : '→'}</span>
+                        </div>
+                      );
+                    }
                     return hasFile ? (
                       <a
                         className="db-item is-link"
