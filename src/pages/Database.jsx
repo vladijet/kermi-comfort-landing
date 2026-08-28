@@ -33,7 +33,7 @@ const SECTION_STYLE = `
   .db-list { display: flex; flex-direction: column; gap: 2px; }
   .db-item {
     display: block;
-    padding: 14px 18px; background: transparent;
+    padding: 14px 0; background: transparent;
     border: 1px solid transparent; border-radius: 8px;
     transition: background .2s, border-color .2s, transform .15s;
   }
