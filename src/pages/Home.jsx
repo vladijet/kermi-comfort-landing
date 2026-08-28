@@ -369,13 +369,13 @@ const LANDING_HTML = `
   .valve-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
   .v-spec {
     padding: 20px; background: rgba(255,255,255,.05);
-    border-left: 3px solid var(--lime); border-radius: 8px;
+    border-radius: 8px;
   }
   .v-spec-val { font-size: 24px; font-weight: 900; color: var(--lime); margin-bottom: 4px; }
   .v-spec-lbl { font-size: 12px; color: #aaa; }
   .valve-notice {
     margin-top: 32px; padding: 16px 20px;
-    background: rgba(191,222,0,.1); border-left: 3px solid var(--lime);
+    background: rgba(255,255,255,.05);
     font-size: 13px; color: #ccc; border-radius: 8px;
   }
 
@@ -1457,7 +1457,7 @@ const LANDING_HTML = `
                style="max-width:100%;max-height:320px;object-fit:contain;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5));">
         </div>
         <p style="text-align:center;color:#666;font-size:12px;margin-top:10px;">Вентильная вставка KERMI V3-Ks</p>
-        <div style="margin-top:16px;padding:16px;background:rgba(191,222,0,.08);border-left:3px solid var(--lime);border-radius:8px">
+        <div style="margin-top:16px;padding:16px;background:rgba(255,255,255,.05);border-radius:8px">
           <p style="font-size:13px;color:#ccc">Для подключения узла нижнего подключения к радиаторам FTV/FTU/PTV используются переходники G½"→G¾", которые идут в комплекте.</p>
         </div>
       </div>
