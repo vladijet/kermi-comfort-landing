@@ -43,8 +43,11 @@ const SECTION_STYLE = `
     background: rgba(191,222,0,.08); border-color: rgba(191,222,0,.3);
     transform: translateX(4px);
   }
-  .db-item-text { font-size: 15px; font-weight: 600; color: #fff; line-height: 1.4; }
-  .db-item.is-dim .db-item-text { color: #666; font-weight: 500; }
+  .db-item-row { display: flex; align-items: center; gap: 10px; }
+  .db-item-icon { flex-shrink: 0; color: ${LIME}; }
+  .db-item-text { font-size: 15px; font-weight: 400; color: #fff; line-height: 1.4; }
+  .db-item.is-dim .db-item-text { color: #666; }
+  .db-item.is-dim .db-item-icon { color: #444; }
 
   .db-loading { text-align: center; padding: 64px 20px; color: #888; font-size: 15px; }
   .db-spinner {
@@ -145,7 +148,10 @@ export default function Database() {
                           tabIndex={0}
                           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleYandexDownload(asset); } }}
                         >
-                          <span className="db-item-text">{isResolving ? asset.title + ' (подготовка…)' : asset.title}</span>
+                          <span className="db-item-row">
+                            <Download className="db-item-icon" size={16} strokeWidth={2} />
+                            <span className="db-item-text">{isResolving ? asset.title + ' (подготовка…)' : asset.title}</span>
+                          </span>
                         </div>
                       );
                     }
@@ -158,11 +164,17 @@ export default function Database() {
                         rel="noopener noreferrer"
                         download
                       >
-                        <span className="db-item-text">{asset.title}</span>
+                        <span className="db-item-row">
+                          <Download className="db-item-icon" size={16} strokeWidth={2} />
+                          <span className="db-item-text">{asset.title}</span>
+                        </span>
                       </a>
                     ) : (
                       <div className="db-item is-dim" key={asset.id}>
-                        <span className="db-item-text">{asset.title}</span>
+                        <span className="db-item-row">
+                          <Download className="db-item-icon" size={16} strokeWidth={2} />
+                          <span className="db-item-text">{asset.title}</span>
+                        </span>
                       </div>
                     );
                   })}
