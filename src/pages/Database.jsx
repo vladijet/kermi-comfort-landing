@@ -16,7 +16,7 @@ const SECTION_STYLE = `
 
   .db-hero {
     padding: 64px 48px 40px; text-align: center;
-    background: linear-gradient(135deg, #111 0%, #161616 60%, #182008 100%);
+    background: transparent;
   }
   .db-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: #fff; margin-bottom: 12px; }
   .db-hero p { font-size: 15px; color: #aaa; max-width: 620px; margin: 0 auto; line-height: 1.7; }
@@ -25,39 +25,25 @@ const SECTION_STYLE = `
 
   .db-section { margin-bottom: 48px; }
   .db-section-head {
-    display: flex; align-items: center; gap: 14px;
     margin-bottom: 16px; padding-bottom: 12px;
     border-bottom: 2px solid ${LIME};
   }
   .db-section-title { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: .5px; }
-  .db-section-count {
-    font-size: 12px; font-weight: 700; color: ${DARK};
-    background: ${LIME}; padding: 3px 10px; border-radius: 20px;
-  }
 
   .db-list { display: flex; flex-direction: column; gap: 2px; }
   .db-item {
-    display: flex; align-items: center; gap: 14px;
-    padding: 14px 18px; background: #141414;
+    display: block;
+    padding: 14px 18px; background: transparent;
     border: 1px solid transparent; border-radius: 8px;
     transition: background .2s, border-color .2s, transform .15s;
   }
   .db-item.is-link { cursor: pointer; }
   .db-item.is-link:hover {
-    background: #1a1a1a; border-color: rgba(191,222,0,.3);
+    background: rgba(191,222,0,.08); border-color: rgba(191,222,0,.3);
     transform: translateX(4px);
   }
-  .db-item-icon {
-    flex-shrink: 0; width: 36px; height: 36px;
-    display: flex; align-items: center; justify-content: center;
-    background: ${LIME}; color: ${DARK}; border-radius: 8px;
-    font-size: 18px; font-weight: 700;
-  }
-  .db-item.is-dim .db-item-icon { background: #2a2a2a; color: #555; }
-  .db-item-text { font-size: 15px; font-weight: 600; color: #fff; line-height: 1.4; flex: 1; }
+  .db-item-text { font-size: 15px; font-weight: 600; color: #fff; line-height: 1.4; }
   .db-item.is-dim .db-item-text { color: #666; font-weight: 500; }
-  .db-item-arrow { color: #555; font-size: 18px; flex-shrink: 0; }
-  .db-item.is-link .db-item-arrow { color: ${LIME}; }
 
   .db-loading { text-align: center; padding: 64px 20px; color: #888; font-size: 15px; }
   .db-spinner {
@@ -143,7 +129,6 @@ export default function Database() {
               <div className="db-section" key={sec.key}>
                 <div className="db-section-head">
                   <div className="db-section-title">{sec.label}</div>
-                  <div className="db-section-count">{items.length}</div>
                 </div>
                 <div className="db-list">
                   {items.map(asset => {
@@ -159,9 +144,7 @@ export default function Database() {
                           tabIndex={0}
                           onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleYandexDownload(asset); } }}
                         >
-                          <span className="db-item-icon">{isResolving ? '…' : '⬇'}</span>
-                          <span className="db-item-text">{asset.title}</span>
-                          <span className="db-item-arrow">{isResolving ? 'подготовка…' : '→'}</span>
+                          <span className="db-item-text">{isResolving ? asset.title + ' (подготовка…)' : asset.title}</span>
                         </div>
                       );
                     }
@@ -174,15 +157,11 @@ export default function Database() {
                         rel="noopener noreferrer"
                         download
                       >
-                        <span className="db-item-icon">⬇</span>
                         <span className="db-item-text">{asset.title}</span>
-                        <span className="db-item-arrow">→</span>
                       </a>
                     ) : (
                       <div className="db-item is-dim" key={asset.id}>
-                        <span className="db-item-icon">—</span>
                         <span className="db-item-text">{asset.title}</span>
-                        <span className="db-item-arrow">·</span>
                       </div>
                     );
                   })}
