@@ -7,7 +7,7 @@ const DARK = '#1A1A1A';
 const SECTIONS = [
   { key: 'Фотобанк', label: 'Фотобанк' },
   { key: 'Полиграфия', label: 'Буклеты и прайсы' },
-  { key: 'BIM', label: 'BIM модели' },
+  { key: 'BIM', label: 'BIM модели (Revit, формат *.rfa)' },
 ];
 const PHOTOBANK_SUBSECTIONS = [
   'Логотип',
