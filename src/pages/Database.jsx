@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Download } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 
 const LIME = '#BFDE00';
