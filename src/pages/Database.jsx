@@ -39,7 +39,7 @@ const SECTION_STYLE = `
     padding: 4px 12px; margin-bottom: 18px; border-radius: 4px;
   }
   .db-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: #fff; margin-bottom: 12px; }
-  .db-hero h1 span { color: ${LIME}; }
+  .db-hero h1 span { color: #fff; }
   .db-hero p { font-size: 15px; color: #aaa; max-width: 620px; margin: 0 auto; line-height: 1.7; }
 
   .db-tabs {
@@ -156,19 +156,7 @@ export default function Database() {
     <div className="db-page">
       <style>{SECTION_STYLE}</style>
 
-      <header className="db-header">
-        <a className="db-logo" href="/">
-          <img src="https://media.base44.com/images/public/69f20cdd1ade181e43a31fad/26e20f0a6_Kermi-Logo_t.png" alt="KERMI" className="db-logo-img" />
-          <div>
-            <div className="db-logo-text">KERMI</div>
-            <div className="db-logo-sub">база данных · Комфорт</div>
-          </div>
-        </a>
-        <a className="db-back" href="/">← На главную</a>
-      </header>
-
       <div className="db-hero">
-        <div className="db-hero-tag">База данных Kermi</div>
         <h1>Материалы и ресурсы<br /><span>KERMI Комфорт</span></h1>
         <p>Фотобанк, полиграфия и BIM-модели для проектировщиков, дилеров и партнёров.</p>
       </div>
