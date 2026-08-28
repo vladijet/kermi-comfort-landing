@@ -513,7 +513,7 @@ const LANDING_HTML = `
   .warranty-li {
     display: flex; gap: 12px; align-items: flex-start;
     padding: 16px; background: rgba(255,255,255,.04);
-    border-left: 3px solid var(--lime); border-radius: 8px;
+    border-radius: 8px;
   }
   .warranty-li-icon { font-size: 18px; }
   .warranty-li-text { font-size: 13px; color: #ccc; }
@@ -1766,9 +1766,6 @@ const LANDING_HTML = `
             <div class="warranty-li-text"><strong>Гарантийный срок — 15 лет с даты изготовления</strong>Дата нанесена на обратной стороне нижнего сварочного шва каждого радиатора.</div>
           </div>
           <div class="warranty-li">
-            <div class="warranty-li-text"><strong>Производство в России</strong>Изготовлено по заказу и лицензии KERMI GmbH на новейшей автоматизированной линии. ГОСТ 31311-2022.</div>
-          </div>
-          <div class="warranty-li">
             <div class="warranty-li-text"><strong>Для гарантийного случая необходимо:</strong>Паспорт радиатора, акт ввода в эксплуатацию, правильно заполненный сопроводительный талон.</div>
           </div>
           <div class="warranty-li">
@@ -1786,7 +1783,7 @@ const LANDING_HTML = `
           <div class="water-item"><span class="water-param">Взвеш. вещества</span><span class="water-val">≤ 5 мг/дм³</span></div>
           <div class="water-item"><span class="water-param">Нефтепродукты</span><span class="water-val">≤ 1 мг/дм³</span></div>
         </div>
-        <div style="margin-top:24px;padding:20px;background:rgba(255,255,255,.05);border-left:3px solid var(--lime);border-radius:8px">
+        <div style="margin-top:24px;padding:20px;background:rgba(255,255,255,.05);border-radius:8px">
           <strong style="color:var(--lime);font-size:14px;display:block;margin-bottom:8px">На что гарантия не распространяется:</strong>
           <ul style="padding-left:16px;color:#aaa;font-size:13px;line-height:1.9">
             <li>Нарушение требований монтажа или эксплуатации</li>
