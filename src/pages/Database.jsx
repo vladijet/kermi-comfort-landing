@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Download, ChevronDown } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
+import PanelRadiatorFolder from '@/components/database/PanelRadiatorFolder';
 
 const LIME = '#BFDE00';
 const DARK = '#1A1A1A';
@@ -73,6 +74,14 @@ const SECTION_STYLE = `
   .db-sub .db-list { padding: 4px 0 12px; }
   .db-sub-empty { padding: 10px 4px 14px; font-size: 13px; color: #555; font-style: italic; }
 
+  /* ===== Nested folder accordion (Панельные радиаторы) ===== */
+  .db-sub-nested { padding-left: 14px; border-bottom: 1px solid #222; }
+  .db-sub-nested:last-child { border-bottom: none; }
+  .db-sub-head-nested { padding: 12px 4px; }
+  .db-sub-head-nested .db-sub-title { font-size: 14px; font-weight: 600; }
+  .db-item-nested { padding: 10px 0; }
+  .db-item-nested .db-item-text { font-size: 13px; }
+
   /* ===== Hover preview tooltip ===== */
   .db-preview {
     position: fixed; z-index: 9999; pointer-events: none;
@@ -109,9 +118,11 @@ export default function Database() {
     if (resolvingId) return;
     setResolvingId(asset.id);
     try {
-      const res = await base44.functions.invoke('ResolveYandexDownload', {
-        public_key: asset.file_url.slice('yandex:'.length)
-      });
+      const raw = asset.file_url.slice('yandex:'.length);
+      const [pk, pth] = raw.includes('::') ? raw.split('::') : [raw, undefined];
+      const payload = { public_key: pk };
+      if (pth) payload.path = pth;
+      const res = await base44.functions.invoke('ResolveYandexDownload', payload);
       const href = res?.data?.href;
       if (!href) throw new Error('Не удалось получить ссылку для скачивания');
       window.location.href = href;
@@ -253,7 +264,11 @@ export default function Database() {
                             <div className="db-list">
                               {subItems.length === 0 ? (
                                 <div className="db-sub-empty">Файлов пока нет</div>
-                              ) : subItems.map(asset => renderAssetItem(asset))}
+                              ) : sub === 'Панельные радиаторы' ? (
+                                subItems.map(asset => <PanelRadiatorFolder key={asset.id} asset={asset} />)
+                              ) : (
+                                subItems.map(asset => renderAssetItem(asset))
+                              )}
                             </div>
                           )}
                         </div>
