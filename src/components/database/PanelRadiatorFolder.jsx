@@ -6,6 +6,7 @@ export default function PanelRadiatorFolder({ asset }) {
   const [open, setOpen] = useState(false);
   const [files, setFiles] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [resolvingName, setResolvingName] = useState(null);
   const [preview, setPreview] = useState(null);
 
@@ -17,6 +18,7 @@ export default function PanelRadiatorFolder({ asset }) {
   const loadFiles = async () => {
     if (files || loading) return;
     setLoading(true);
+    setError(null);
     try {
       const res = await base44.functions.invoke('ListYandexFolder', {
         public_key: publicKey,
@@ -24,10 +26,16 @@ export default function PanelRadiatorFolder({ asset }) {
       });
       setFiles(res?.data?.files || []);
     } catch (e) {
-      setFiles([]);
+      setError(e?.message || 'Ошибка загрузки');
     } finally {
       setLoading(false);
     }
+  };
+
+  const retry = () => {
+    setFiles(null);
+    setError(null);
+    loadFiles();
   };
 
   const toggle = () => {
@@ -77,7 +85,22 @@ export default function PanelRadiatorFolder({ asset }) {
       {open && (
         <div className="db-list">
           {loading && <div className="db-sub-empty">Загрузка файлов…</div>}
-          {!loading && files && files.length === 0 && (
+          {!loading && error && (
+            <div className="db-sub-empty" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+              <span>Ошибка загрузки: {error}</span>
+              <button
+                type="button"
+                onClick={retry}
+                style={{
+                  background: '#BFDE00', color: '#1A1A1A', border: 'none', borderRadius: '6px',
+                  padding: '4px 12px', fontSize: '13px', fontWeight: 700, cursor: 'pointer',
+                }}
+              >
+                Повторить
+              </button>
+            </div>
+          )}
+          {!loading && !error && files && files.length === 0 && (
             <div className="db-sub-empty">Файлов не найдено</div>
           )}
           {!loading && files && files.length > 0 && files.map((f) => (
