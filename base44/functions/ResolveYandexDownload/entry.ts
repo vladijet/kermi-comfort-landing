@@ -1,11 +1,28 @@
-import { createClientFromRequest } from 'npm:@base44/sdk@0.8.44';
+async function fetchWithRetry(url, retries = 1) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, { method: 'GET' });
+      if (res.ok) return res;
+      if (res.status >= 500 && attempt < retries) {
+        await new Promise(r => setTimeout(r, 400));
+        continue;
+      }
+      return res;
+    } catch (e) {
+      lastErr = e;
+      if (attempt < retries) {
+        await new Promise(r => setTimeout(r, 400));
+        continue;
+      }
+      throw e;
+    }
+  }
+  throw lastErr;
+}
 
 export default async function(req) {
   try {
-    const base44 = createClientFromRequest(req);
-    const user = await base44.auth.me();
-    if (!user) return Response.json({ error: 'Unauthorized' }, { status: 401 });
-
     const body = await req.json().catch(() => ({}));
     const publicKey = body.public_key;
     if (!publicKey || typeof publicKey !== 'string') {
@@ -16,7 +33,7 @@ export default async function(req) {
     let apiUrl = 'https://cloud-api.yandex.net/v1/disk/public/resources/download?public_key=' +
       encodeURIComponent(publicKey);
     if (path) apiUrl += '&path=' + encodeURIComponent(path);
-    const apiRes = await fetch(apiUrl, { method: 'GET' });
+    const apiRes = await fetchWithRetry(apiUrl);
     if (!apiRes.ok) {
       const txt = await apiRes.text().catch(() => '');
       return Response.json({ error: 'Yandex API error', status: apiRes.status, details: txt }, { status: 502 });
