@@ -268,6 +268,8 @@ export default function Database() {
                                 subItems.map(asset => <PanelRadiatorFolder key={asset.id} asset={asset} />)
                               ) : sub === 'Трубчатые радиаторы' ? (
                                 subItems.map(asset => <PanelRadiatorFolder key={asset.id} asset={asset} />)
+                              ) : sub === 'Внутрипольные конвекторы' ? (
+                                subItems.map(asset => <PanelRadiatorFolder key={asset.id} asset={asset} />)
                               ) : (
                                 subItems.map(asset => renderAssetItem(asset))
                               )}
