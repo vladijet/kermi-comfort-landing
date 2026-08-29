@@ -266,6 +266,8 @@ export default function Database() {
                                 <div className="db-sub-empty">Файлов пока нет</div>
                               ) : sub === 'Панельные радиаторы' ? (
                                 subItems.map(asset => <PanelRadiatorFolder key={asset.id} asset={asset} />)
+                              ) : sub === 'Трубчатые радиаторы' ? (
+                                subItems.map(asset => <PanelRadiatorFolder key={asset.id} asset={asset} />)
                               ) : (
                                 subItems.map(asset => renderAssetItem(asset))
                               )}
