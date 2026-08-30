@@ -1342,17 +1342,19 @@ const LANDING_HTML = `
     </div>
 
     <div class="art-examples">
-      <div class="art-example" style="background:#f9f9f9">
-        <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">1</span>R2C</div>
-        <div class="art-desc-ex">FTV тип 22 | высота 500 мм | длина 400 мм | <strong>белый глянец</strong> | подключение справа | кронштейны в комплекте | Россия</div>
-      </div>
-      <div class="art-example" style="background:#f5ffe0">
-        <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">1</span>R2C<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">RAL7022</span></div>
-        <div class="art-desc-ex">То же, но в цвете <strong>RAL 7022 «Серый», глянцевое исполнение</strong> (код «1» в артикуле + суффикс RAL)</div>
-      </div>
-      <div class="art-example" style="background:#f0fff0">
-        <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">2</span>R2C<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">RAL7022</span></div>
-        <div class="art-desc-ex">То же в цвете <strong>RAL 7022, матовое исполнение</strong> (код «2» вместо «1» в позиции цвета)</div>
+      <div style="background:#f5ffe0;padding:16px 20px;border-radius:8px;display:flex;flex-direction:column;gap:12px;">
+        <div style="display:flex;align-items:center;gap:20px;padding-bottom:12px;border-bottom:1px solid rgba(0,0,0,.06);">
+          <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">1</span>R2C</div>
+          <div class="art-desc-ex">FTV тип 22 | высота 500 мм | длина 400 мм | <strong>белый глянец</strong> | подключение справа | кронштейны в комплекте | Россия</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;padding-bottom:12px;border-bottom:1px solid rgba(0,0,0,.06);">
+          <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">1</span>R2C<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">RAL7022</span></div>
+          <div class="art-desc-ex">То же, но в цвете <strong>RAL 7022 «Серый», глянцевое исполнение</strong> (код «1» в артикуле + суффикс RAL)</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">2</span>R2C<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">RAL7022</span></div>
+          <div class="art-desc-ex">То же в цвете <strong>RAL 7022, матовое исполнение</strong> (код «2» вместо «1» в позиции цвета)</div>
+        </div>
       </div>
     </div>
   </div>
