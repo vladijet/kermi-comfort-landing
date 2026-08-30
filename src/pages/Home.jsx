@@ -1343,26 +1343,16 @@ const LANDING_HTML = `
 
     <div class="art-examples">
       <div class="art-example" style="background:#f9f9f9">
-        <div class="art-code">FTV22050040<span style="color:#d00;font-weight:700">1</span>R2C</div>
+        <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">1</span>R2C</div>
         <div class="art-desc-ex">FTV тип 22 | высота 500 мм | длина 400 мм | <strong>белый глянец</strong> | подключение справа | кронштейны в комплекте | Россия</div>
       </div>
       <div class="art-example" style="background:#f5ffe0">
-        <div class="art-code">FTV22050040<span style="color:#d00;font-weight:700">1</span>R2C<span style="color:#d00;font-weight:700">RAL7022</span></div>
+        <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">1</span>R2C<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">RAL7022</span></div>
         <div class="art-desc-ex">То же, но в цвете <strong>RAL 7022 «Серый», глянцевое исполнение</strong> (код «1» в артикуле + суффикс RAL)</div>
       </div>
       <div class="art-example" style="background:#f0fff0">
-        <div class="art-code">FTV22050040<span style="color:#d00;font-weight:700">2</span>R2C<span style="color:#d00;font-weight:700">RAL7022</span></div>
+        <div class="art-code">FTV22050040<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">2</span>R2C<span style="background:#CCFF00;color:#000;font-weight:700;border-radius:3px;padding:0 2px">RAL7022</span></div>
         <div class="art-desc-ex">То же в цвете <strong>RAL 7022, матовое исполнение</strong> (код «2» вместо «1» в позиции цвета)</div>
-      </div>
-    </div>
-
-    <div class="ral-note">
-      <strong>⚠ Важно для заказа цветных радиаторов</strong>
-      <div style="display:flex;flex-wrap:wrap;gap:4px 28px;line-height:1.5;">
-        <span>Наценка за цветные исполнения — <strong>50%</strong></span>
-        <span>Доступны две текстуры: <strong>глянцевая (код 1)</strong> и <strong>матовая (код 2)</strong></span>
-        <span>Срок изготовления любого цветного исполнения до <strong>45 дней</strong></span>
-        <span>Стандартный белый всегда <strong>на складе</strong></span>
       </div>
     </div>
   </div>
