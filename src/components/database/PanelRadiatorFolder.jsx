@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Download, ChevronDown } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
+import { triggerDownload } from '@/lib/yandexDownload';
 
 export default function PanelRadiatorFolder({ asset }) {
   const [open, setOpen] = useState(false);
@@ -54,7 +55,7 @@ export default function PanelRadiatorFolder({ asset }) {
       });
       const href = res?.data?.href;
       if (!href) throw new Error('Не удалось получить ссылку для скачивания');
-      window.location.href = href;
+      triggerDownload(href);
     } catch (e) {
       alert('Ошибка при подготовке скачивания: ' + (e?.message || e));
     } finally {

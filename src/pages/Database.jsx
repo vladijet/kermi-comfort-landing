@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Download, ChevronDown } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import PanelRadiatorFolder from '@/components/database/PanelRadiatorFolder';
+import { triggerDownload } from '@/lib/yandexDownload';
 
 const LIME = '#BFDE00';
 const DARK = '#1A1A1A';
@@ -125,7 +126,7 @@ export default function Database() {
       const res = await base44.functions.invoke('ResolveYandexDownload', payload);
       const href = res?.data?.href;
       if (!href) throw new Error('Не удалось получить ссылку для скачивания');
-      window.location.href = href;
+      triggerDownload(href);
     } catch (e) {
       alert('Ошибка при подготовке скачивания: ' + (e?.message || e));
     } finally {
