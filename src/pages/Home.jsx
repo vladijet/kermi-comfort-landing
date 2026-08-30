@@ -246,7 +246,6 @@ const LANDING_HTML = `
     cursor: pointer; border-top: none;
     transition: box-shadow .25s, transform .2s; border-radius: 10px; overflow: hidden;
   }
-  .model-card-v2.active { box-shadow: none; }
   .model-card-v2:hover { transform: translateY(-3px); }
   .model-card-v2 { display: flex; flex-direction: column; }
   .model-card-v2 .model-card-body { padding: 20px 20px 0; display: flex; flex-direction: column; flex: 1; }
