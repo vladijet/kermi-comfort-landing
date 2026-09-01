@@ -1883,7 +1883,7 @@ const LANDING_HTML = `
     <h4>Инструменты</h4>
     <ul>
       <li><a href="#selection" style="font-size:13px;color:#999;">Онлайн-конфигуратор</a></li>
-      <li><a href="https://disk.yandex.ru/d/FlWD9_j8s9_ViA" target="_blank" rel="noopener">BIM-модели и 3D-данные</a></li>
+      <li><a href="https://media.base44.com/files/public/6a590b715e6fa7f1a2f64056/96fc271e5_01-Kermi_radiators-Comfort-series-REVIT.zip" download>BIM-модели и 3D-данные</a></li>
       <li><a href="https://www.kermi.com/ru/ru/" target="_blank" rel="noopener">Портал для партнёров</a></li>
       <li><a href="https://www.kermi.com/ru/ru/" target="_blank" rel="noopener">Скачать документы</a></li>
     </ul>
