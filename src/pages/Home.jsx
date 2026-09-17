@@ -1810,8 +1810,7 @@ const LANDING_HTML = `
           <div class="dealer-name">Версус Групп</div>
           <div class="dealer-row"><span class="dealer-icon">📍</span><span class="dealer-addr">г. Москва, Логистический центр Славянский Мир, вл. 1"А"</span></div>
           <div class="dealer-row"><span class="dealer-icon">✉️</span><span class="dealer-addr"><a href="mailto:info@versusgroup.ru" style="color:var(--grey);text-decoration:none">info@versusgroup.ru</a></span></div>
-          <div class="dealer-row"><span class="dealer-icon">📞</span><div class="dealer-phone"><a href="tel:+84957963444">8 (495) 796-3-444</a></div></div>
-          <div class="dealer-row"><span class="dealer-icon">📱</span><div class="dealer-phone"><a href="tel:+89099099192">8 (909) 909-91-92</a></div></div>
+          <div class="dealer-row"><span class="dealer-icon">📞</span><div class="dealer-phone"><a href="tel:+84957963444">8 (495) 796-3-444</a>, <a href="tel:+89099099192">8 (909) 909-91-92</a></div></div>
         </div>
       </div>
       <div class="dealer-city-block">
