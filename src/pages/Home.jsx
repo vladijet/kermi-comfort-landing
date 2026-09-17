@@ -1798,6 +1798,13 @@ const LANDING_HTML = `
       <div class="dealer-city-block">
         <div class="dealer-city-name">Москва</div>
         <div class="dealer-card">
+          <div class="dealer-name">Версус Групп</div>
+          <div class="dealer-row"><span class="dealer-icon">📍</span><span class="dealer-addr">г. Москва, Логистический центр Славянский Мир, вл. 1"А"</span></div>
+          <div class="dealer-row"><span class="dealer-icon">✉️</span><span class="dealer-addr"><a href="mailto:info@versusgroup.ru" style="color:var(--grey);text-decoration:none">info@versusgroup.ru</a></span></div>
+          <div class="dealer-row"><span class="dealer-icon">📞</span><div class="dealer-phone"><a href="tel:+84957963444">8 (495) 796-3-444</a></div></div>
+          <div class="dealer-row"><span class="dealer-icon">📱</span><div class="dealer-phone"><a href="tel:+89099099192">8 (909) 909-91-92</a></div></div>
+        </div>
+        <div class="dealer-card" style="margin-top:16px">
           <div class="dealer-name"><a href="https://masterwatt.ru" target="_blank" rel="noopener">Мастер Ватт</a></div>
           <div class="dealer-row"><span class="dealer-icon">📍</span><span class="dealer-addr">141033, Московская область, г/о Мытищи, пос. Кардо-Лента, ул. Южная, стр. 1, а/я 609</span></div>
           <div class="dealer-row"><span class="dealer-icon">✉️</span><span class="dealer-addr"><a href="mailto:pochta@masterwatt.ru" style="color:var(--grey);text-decoration:none">pochta@masterwatt.ru</a></span></div>
