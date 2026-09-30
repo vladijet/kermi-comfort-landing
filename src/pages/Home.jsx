@@ -1042,7 +1042,7 @@ const LANDING_HTML = `
 <section class="models" id="models">
   <div class="container">
     <div class="section-tag">Модельный ряд</div>
-    <h2>Пять серий —<br>любое применение</h2>
+    <h2>Пять моделей —<br>любое применение</h2>
     <div class="divider"></div>
     <p class="lead">От классических радиаторов с боковым подключением до гигиенических исполнений для медицинских учреждений. Типы 10–33, высоты 200–600 мм, длины 400–3000 мм с шагом 100 мм.</p>
 
@@ -1302,7 +1302,7 @@ const LANDING_HTML = `
       <div class="art-block">
         <div class="art-box" style="background:#BFDE00">FTV</div>
         <div class="art-arrow">↓</div>
-        <div class="art-desc">Серия<br>(FK0/FTV/FTU/PK0/PTV)</div>
+        <div class="art-desc">Модель<br>(FK0/FTV/FTU/PK0/PTV)</div>
       </div>
       <div class="art-block">
         <div class="art-box" style="background:#4DC0FF">22</div>
