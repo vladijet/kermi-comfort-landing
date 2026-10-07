@@ -1867,6 +1867,15 @@ const LANDING_HTML = `
           <div class="dealer-row"><span class="dealer-icon">📞</span><div class="dealer-phone"><a href="tel:+73833991122">+7 (383) 399-11-22</a></div></div>
         </div>
       </div>
+      <div class="dealer-city-block">
+        <div class="dealer-city-name">Махачкала</div>
+        <div class="dealer-card">
+          <div class="dealer-name">Евротерм</div>
+          <div class="dealer-row"><span class="dealer-icon">📍</span><span class="dealer-addr">проспект Амет-Хана Султана, 222</span></div>
+          <div class="dealer-row"><span class="dealer-icon">✉️</span><span class="dealer-addr"><a href="mailto:eurotherm05@mail.ru" style="color:var(--grey);text-decoration:none">eurotherm05@mail.ru</a></span></div>
+          <div class="dealer-row"><span class="dealer-icon">📞</span><div class="dealer-phone"><a href="tel:+79882929294">+7 988 292 92 94</a></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
