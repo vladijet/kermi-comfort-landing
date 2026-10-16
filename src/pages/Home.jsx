@@ -1697,6 +1697,7 @@ const LANDING_HTML = `
     <div class="section-tag">Конфигуратор подбора</div>
     <h2>Конфигуратор подбора Керми Комфорт</h2>
     <div class="divider"></div>
+    <p style="margin-top:16px"><a href="https://comfort.kermi-configurator.com/" target="_blank" rel="noopener noreferrer" style="font-size:15px;font-weight:600;color:var(--grey);text-decoration:none;border-bottom:1px solid var(--lime);transition:color .2s" onmouseover="this.style.color='#1A1A1A'" onmouseout="this.style.color='#555'">Перейти на сайт конфигуратора →</a></p>
   </div>
   <div class="container">
     <div id="kermi-widget-cafdc5eb" style="max-width:1200px;margin:0 auto;">
