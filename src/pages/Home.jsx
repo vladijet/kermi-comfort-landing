@@ -416,7 +416,7 @@ const LANDING_HTML = `
 
   /* ========== ПОДБОР ========== */
   .selection { background: var(--lgrey); }
-  .config-link-row { margin-top: 16px; text-align: right; }
+  .config-link-row { margin-top: 16px; margin-bottom: 5px; text-align: right; }
   .config-link {
     font-size: 15px; font-weight: 300; color: #333;
     text-decoration: underline; text-underline-offset: 3px;
