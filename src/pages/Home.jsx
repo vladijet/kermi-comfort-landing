@@ -416,6 +416,14 @@ const LANDING_HTML = `
 
   /* ========== ПОДБОР ========== */
   .selection { background: var(--lgrey); }
+  .config-link-row { margin-top: 16px; text-align: right; }
+  .config-link {
+    font-size: 15px; font-weight: 300; color: #333;
+    text-decoration: underline; text-underline-offset: 3px;
+    transition: color .2s;
+  }
+  .config-link:hover { color: var(--lime); }
+  @media (max-width: 768px) { .config-link-row { text-align: left; } }
   .sel-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
   .sel-card { background: var(--white); padding: 28px 24px; border-top: 4px solid var(--dark); }
   .sel-card.lime-top { border-color: var(--lime); }
@@ -1697,7 +1705,7 @@ const LANDING_HTML = `
     <div class="section-tag">Конфигуратор подбора</div>
     <h2>Конфигуратор подбора Керми Комфорт</h2>
     <div class="divider"></div>
-    <p style="margin-top:16px"><a href="https://comfort.kermi-configurator.com/" target="_blank" rel="noopener noreferrer" style="font-size:15px;font-weight:600;color:var(--grey);text-decoration:none;border-bottom:1px solid var(--lime);transition:color .2s" onmouseover="this.style.color='#1A1A1A'" onmouseout="this.style.color='#555'">Перейти на сайт конфигуратора →</a></p>
+    <p class="config-link-row"><a class="config-link" href="https://comfort.kermi-configurator.com/" target="_blank" rel="noopener noreferrer">Перейти на сайт конфигуратора</a></p>
   </div>
   <div class="container">
     <div id="kermi-widget-cafdc5eb" style="max-width:1200px;margin:0 auto;">
