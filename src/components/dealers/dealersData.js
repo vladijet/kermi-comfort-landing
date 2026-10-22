@@ -1,3 +1,5 @@
+import { LUNDA } from './lundaData';
+
 // Coordinates approximated from street addresses (no geocoding key) — verify before launch.
 export const DEALERS = [
   { id: 'mw-msk', city: 'Москва', name: 'Мастер Ватт', site: 'https://masterwatt.ru', addr: '141033, Московская область, г/о Мытищи, пос. Кардо-Лента, ул. Южная, стр. 1, а/я 609', email: 'pochta@masterwatt.ru', phones: [['+74957302299', '+7 (495) 730-22-99']], coords: [55.9293, 37.728] },
@@ -11,4 +13,6 @@ export const DEALERS = [
   { id: 'eurotherm', city: 'Махачкала', name: 'Евротерм', addr: 'проспект Амет-Хана Султана, 222', email: 'eurotherm05@mail.ru', phones: [['+79882929294', '+7 988 292 92 94']], coords: [42.99, 47.505] },
 ];
 
-export const CITIES = [...new Set(DEALERS.map((d) => d.city))];
+DEALERS.push(...LUNDA);
+
+export const CITIES = [...new Set(DEALERS.map((d) => d.city))].sort((a, b) => a.localeCompare(b, 'ru'));

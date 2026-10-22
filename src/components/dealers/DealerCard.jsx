@@ -6,6 +6,7 @@ export default function DealerCard({ dealer, active, onClick }) {
       {active && (
         <div className="dl-details" onClick={(e) => e.stopPropagation()}>
           <div className="dl-addr">📍 {dealer.addr}</div>
+          {dealer.hours && <div className="dl-addr">🕒 {dealer.hours}</div>}
           {dealer.phones.map(([tel, label]) => (
             <a key={tel} href={`tel:${tel}`} className="dl-link">📞 {label}</a>
           ))}
