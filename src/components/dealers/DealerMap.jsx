@@ -39,12 +39,12 @@ export default function DealerMap({ dealers, selectedId, onSelect }) {
       m.geoObjects.removeAll();
       dealers.forEach((d) => {
         const active = d.id === selectedId;
-        const layout = ymaps.templateLayoutFactory.createClass(
-          `<img class="k-pin${active ? ' k-pin-active' : ''}" src="${PIN_ICON}" alt="" />`
-        );
+        const size = active ? 52 : 40;
         const pm = new ymaps.Placemark(d.coords, { hintContent: `${d.name} — ${d.city}` }, {
-          iconLayout: layout,
-          iconShape: { type: 'Rectangle', coordinates: [[-20, -40], [20, 0]] },
+          iconLayout: 'default#image',
+          iconImageHref: PIN_ICON,
+          iconImageSize: [size, size],
+          iconImageOffset: [-size / 2, -size],
           zIndex: active ? 1000 : 1,
         });
         pm.events.add('click', () => selectRef.current(d.id));
