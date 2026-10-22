@@ -1,4 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import DealerLocator from '@/components/dealers/DealerLocator';
 
 const LANDING_HTML = `
 <style>
@@ -1803,7 +1805,8 @@ const LANDING_HTML = `
     <div class="section-tag">Где купить</div>
     <h2>Официальные дилеры</h2>
     <div class="divider"></div>
-    <div class="dealers-grid">
+    <div id="dealer-locator-root"></div>
+    <div class="dealers-grid" style="display:none">
       <div class="dealer-city-block">
         <div class="dealer-city-name">Москва</div>
         <div class="dealer-card">
@@ -1927,7 +1930,9 @@ const LANDING_HTML = `
 `;
 
 export default function Home() {
+  const [portalEl, setPortalEl] = useState(null);
   useEffect(() => {
+    setPortalEl(document.getElementById('dealer-locator-root'));
     // ===== Model Type Selector =====
     function showTypeRow(series, type) {
       const sec = document.getElementById('tsec_' + series);
@@ -2063,5 +2068,10 @@ export default function Home() {
     };
   }, []);
 
-  return <div dangerouslySetInnerHTML={{ __html: LANDING_HTML }} />;
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: LANDING_HTML }} />
+      {portalEl && createPortal(<DealerLocator />, portalEl)}
+    </>
+  );
 }
