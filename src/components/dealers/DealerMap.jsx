@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+const PIN_ICON = 'https://media.base44.com/images/public/6a590b715e6fa7f1a2f64056/0fb480821_Icon_Kermi_dealers_points.svg';
+
 let loader;
 function loadYmaps() {
   if (!loader) {
@@ -38,11 +40,11 @@ export default function DealerMap({ dealers, selectedId, onSelect }) {
       dealers.forEach((d) => {
         const active = d.id === selectedId;
         const layout = ymaps.templateLayoutFactory.createClass(
-          `<div class="k-pin${active ? ' k-pin-active' : ''}">K</div>`
+          `<img class="k-pin${active ? ' k-pin-active' : ''}" src="${PIN_ICON}" alt="" />`
         );
         const pm = new ymaps.Placemark(d.coords, { hintContent: `${d.name} — ${d.city}` }, {
           iconLayout: layout,
-          iconShape: { type: 'Circle', coordinates: [0, 0], radius: 18 },
+          iconShape: { type: 'Rectangle', coordinates: [[-20, -40], [20, 0]] },
           zIndex: active ? 1000 : 1,
         });
         pm.events.add('click', () => selectRef.current(d.id));
